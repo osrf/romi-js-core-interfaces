@@ -1,0 +1,53 @@
+{
+  "name": "@romi/core",
+  "version": "0.0.1",
+  "description": "library to interface with components in RoMi",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:gen && tsc && npm run post-build",
+    "build:gen": "python3 scripts/gentypes.py lib/romi-msgs rmf_door_msgs rmf_lift_msgs rmf_fleet_msgs rmf_task_msgs rmf_dispenser_msgs rmf_workcell_msgs building_map_msgs",
+    "post-build": "cp package.json dist/lib",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist lib/romi-msgs",
+    "test": "jasmine",
+    "test:cov": "nyc npm run test",
+    "lint": "eslint . --ext .ts",
+    "docs": "rm -rf docs && typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osrf/romi-js-core"
+  },
+  "author": "Teo Koon Peng <koonpeng@openrobotics.org>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "rclnodejs": "^0.11.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.4",
+    "@types/node": "^12.12.27",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "jasmine": "^3.5.0",
+    "nyc": "^14.1.1",
+    "source-map-support": "^0.5.16",
+    "typedoc": "^0.15.8",
+    "typescript": "^3.7.5"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "spec/",
+      "lib/romi-msgs/"
+    ],
+    "reporter": [
+      "html"
+    ]
+  }
+}

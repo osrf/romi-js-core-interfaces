@@ -1,0 +1,580 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LiftState | @romi/core - v0.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@romi/core - v0.0.1</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="liftstate.html">LiftState</a>
+				</li>
+			</ul>
+			<h1>Class LiftState</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">LiftState</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="liftstate.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#available_floors" class="tsd-kind-icon">available_<wbr>floors</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#available_modes" class="tsd-kind-icon">available_<wbr>modes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#current_floor" class="tsd-kind-icon">current_<wbr>floor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#current_mode" class="tsd-kind-icon">current_<wbr>mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#destination_floor" class="tsd-kind-icon">destination_<wbr>floor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#door_state" class="tsd-kind-icon">door_<wbr>state</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#lift_name" class="tsd-kind-icon">lift_<wbr>name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#lift_time" class="tsd-kind-icon">lift_<wbr>time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#motion_state" class="tsd-kind-icon">motion_<wbr>state</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="liftstate.html#session_id" class="tsd-kind-icon">session_<wbr>id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#door_closed" class="tsd-kind-icon">DOOR_<wbr>CLOSED</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#door_moving" class="tsd-kind-icon">DOOR_<wbr>MOVING</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#door_open" class="tsd-kind-icon">DOOR_<wbr>OPEN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#mode_agv" class="tsd-kind-icon">MODE_<wbr>AGV</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#mode_emergency" class="tsd-kind-icon">MODE_<wbr>EMERGENCY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#mode_fire" class="tsd-kind-icon">MODE_<wbr>FIRE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#mode_human" class="tsd-kind-icon">MODE_<wbr>HUMAN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#mode_offline" class="tsd-kind-icon">MODE_<wbr>OFFLINE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#mode_unknown" class="tsd-kind-icon">MODE_<wbr>UNKNOWN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#motion_down" class="tsd-kind-icon">MOTION_<wbr>DOWN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#motion_stopped" class="tsd-kind-icon">MOTION_<wbr>STOPPED</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#motion_unknown" class="tsd-kind-icon">MOTION_<wbr>UNKNOWN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#motion_up" class="tsd-kind-icon">MOTION_<wbr>UP</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="liftstate.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Lift<wbr>State<span class="tsd-signature-symbol">(</span>lift_time<span class="tsd-signature-symbol">: </span><a href="time.html" class="tsd-signature-type">Time</a>, lift_name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, available_floors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, current_floor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, destination_floor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, door_state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, motion_state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, available_modes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span>, current_mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, session_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="liftstate.html" class="tsd-signature-type">LiftState</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:20</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>lift_time: <a href="time.html" class="tsd-signature-type">Time</a></h5>
+								</li>
+								<li>
+									<h5>lift_name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>available_floors: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>current_floor: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>destination_floor: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>door_state: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>motion_state: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>available_modes: <span class="tsd-signature-type">Uint8Array</span></h5>
+								</li>
+								<li>
+									<h5>current_mode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>session_id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="liftstate.html" class="tsd-signature-type">LiftState</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="available_floors" class="tsd-anchor"></a>
+					<h3>available_<wbr>floors</h3>
+					<div class="tsd-signature tsd-kind-icon">available_<wbr>floors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:25</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="available_modes" class="tsd-anchor"></a>
+					<h3>available_<wbr>modes</h3>
+					<div class="tsd-signature tsd-kind-icon">available_<wbr>modes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:30</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="current_floor" class="tsd-anchor"></a>
+					<h3>current_<wbr>floor</h3>
+					<div class="tsd-signature tsd-kind-icon">current_<wbr>floor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:26</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="current_mode" class="tsd-anchor"></a>
+					<h3>current_<wbr>mode</h3>
+					<div class="tsd-signature tsd-kind-icon">current_<wbr>mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:31</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="destination_floor" class="tsd-anchor"></a>
+					<h3>destination_<wbr>floor</h3>
+					<div class="tsd-signature tsd-kind-icon">destination_<wbr>floor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:27</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="door_state" class="tsd-anchor"></a>
+					<h3>door_<wbr>state</h3>
+					<div class="tsd-signature tsd-kind-icon">door_<wbr>state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:28</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="lift_name" class="tsd-anchor"></a>
+					<h3>lift_<wbr>name</h3>
+					<div class="tsd-signature tsd-kind-icon">lift_<wbr>name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:24</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="lift_time" class="tsd-anchor"></a>
+					<h3>lift_<wbr>time</h3>
+					<div class="tsd-signature tsd-kind-icon">lift_<wbr>time<span class="tsd-signature-symbol">:</span> <a href="time.html" class="tsd-signature-type">Time</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:23</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="motion_state" class="tsd-anchor"></a>
+					<h3>motion_<wbr>state</h3>
+					<div class="tsd-signature tsd-kind-icon">motion_<wbr>state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:29</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="session_id" class="tsd-anchor"></a>
+					<h3>session_<wbr>id</h3>
+					<div class="tsd-signature tsd-kind-icon">session_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:32</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="door_closed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> DOOR_<wbr>CLOSED</h3>
+					<div class="tsd-signature tsd-kind-icon">DOOR_<wbr>CLOSED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:8</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="door_moving" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> DOOR_<wbr>MOVING</h3>
+					<div class="tsd-signature tsd-kind-icon">DOOR_<wbr>MOVING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:9</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="door_open" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> DOOR_<wbr>OPEN</h3>
+					<div class="tsd-signature tsd-kind-icon">DOOR_<wbr>OPEN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2</span><span class="tsd-signature-symbol"> =&nbsp;2</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:10</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="mode_agv" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MODE_<wbr>AGV</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>AGV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2</span><span class="tsd-signature-symbol"> =&nbsp;2</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:17</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="mode_emergency" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MODE_<wbr>EMERGENCY</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>EMERGENCY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">5</span><span class="tsd-signature-symbol"> =&nbsp;5</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:20</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="mode_fire" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MODE_<wbr>FIRE</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>FIRE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">3</span><span class="tsd-signature-symbol"> =&nbsp;3</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:18</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="mode_human" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MODE_<wbr>HUMAN</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>HUMAN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:16</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="mode_offline" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MODE_<wbr>OFFLINE</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>OFFLINE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">4</span><span class="tsd-signature-symbol"> =&nbsp;4</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:19</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="mode_unknown" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MODE_<wbr>UNKNOWN</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>UNKNOWN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:15</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="motion_down" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MOTION_<wbr>DOWN</h3>
+					<div class="tsd-signature tsd-kind-icon">MOTION_<wbr>DOWN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2</span><span class="tsd-signature-symbol"> =&nbsp;2</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:13</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="motion_stopped" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MOTION_<wbr>STOPPED</h3>
+					<div class="tsd-signature tsd-kind-icon">MOTION_<wbr>STOPPED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:11</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="motion_unknown" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MOTION_<wbr>UNKNOWN</h3>
+					<div class="tsd-signature tsd-kind-icon">MOTION_<wbr>UNKNOWN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">3</span><span class="tsd-signature-symbol"> =&nbsp;3</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:14</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="motion_up" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> MOTION_<wbr>UP</h3>
+					<div class="tsd-signature tsd-kind-icon">MOTION_<wbr>UP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:12</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="typename" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> type<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">type<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"rmf_lift_msgs/msg/LiftState"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;rmf_lift_msgs/msg/LiftState&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/romi-msgs/rmf_lift_msgs/msg/LiftState.ts:6</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="liftstate.html" class="tsd-kind-icon">Lift<wbr>State</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="liftstate.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#available_floors" class="tsd-kind-icon">available_<wbr>floors</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#available_modes" class="tsd-kind-icon">available_<wbr>modes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#current_floor" class="tsd-kind-icon">current_<wbr>floor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#current_mode" class="tsd-kind-icon">current_<wbr>mode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#destination_floor" class="tsd-kind-icon">destination_<wbr>floor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#door_state" class="tsd-kind-icon">door_<wbr>state</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#lift_name" class="tsd-kind-icon">lift_<wbr>name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#lift_time" class="tsd-kind-icon">lift_<wbr>time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#motion_state" class="tsd-kind-icon">motion_<wbr>state</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="liftstate.html#session_id" class="tsd-kind-icon">session_<wbr>id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#door_closed" class="tsd-kind-icon">DOOR_<wbr>CLOSED</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#door_moving" class="tsd-kind-icon">DOOR_<wbr>MOVING</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#door_open" class="tsd-kind-icon">DOOR_<wbr>OPEN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#mode_agv" class="tsd-kind-icon">MODE_<wbr>AGV</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#mode_emergency" class="tsd-kind-icon">MODE_<wbr>EMERGENCY</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#mode_fire" class="tsd-kind-icon">MODE_<wbr>FIRE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#mode_human" class="tsd-kind-icon">MODE_<wbr>HUMAN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#mode_offline" class="tsd-kind-icon">MODE_<wbr>OFFLINE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#mode_unknown" class="tsd-kind-icon">MODE_<wbr>UNKNOWN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#motion_down" class="tsd-kind-icon">MOTION_<wbr>DOWN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#motion_stopped" class="tsd-kind-icon">MOTION_<wbr>STOPPED</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#motion_unknown" class="tsd-kind-icon">MOTION_<wbr>UNKNOWN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#motion_up" class="tsd-kind-icon">MOTION_<wbr>UP</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="liftstate.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

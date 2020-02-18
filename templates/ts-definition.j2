@@ -1,0 +1,22 @@
+{% set base_type = msgspec.base_type %}
+/* This is a generated file, do not edit */
+
+{% for type in msgspec.dependent_types() %}
+import { {{ type.type }} } from '../../{{ type.pkg_name }}/msg/{{ type.type }}';
+{% endfor %}
+
+export class {{ base_type.type }} {
+  static readonly typeName = '{{ base_type.pkg_name }}/{{ msgspec.reldir }}/{{ base_type.type }}';
+
+{% for const in msgspec.constants %}
+  static readonly {{ const.name }} = {{ const.value }};
+{% endfor %}
+{% if msgspec.constants %}
+
+{% endif %}
+  constructor(
+{% for field in msgspec.fields %}
+    public {{ field.name }}: {{ ts_type(field.type) }},
+{% endfor %}
+  ) { }
+}
