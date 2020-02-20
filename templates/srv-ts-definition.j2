@@ -1,0 +1,12 @@
+/* This is a generated file, do not edit */
+
+import { {{ srvspec.srv_name }}_Request } from './{{ srvspec.srv_name }}_Request';
+import { {{ srvspec.srv_name }}_Response } from './{{ srvspec.srv_name }}_Response';
+
+export class {{ srvspec.srv_name }} {
+  static readonly typeName = '{{ srvspec.pkg_name }}/{{ srvspec.reldir }}/{{ srvspec.srv_name }}';
+  static readonly RequestType = {{ srvspec.srv_name }}_Request;
+  static readonly ResponseType = {{ srvspec.srv_name }}_Response;
+
+  private constructor() { }
+}
