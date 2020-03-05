@@ -1,5 +1,20 @@
-/dist/
 /node_modules/
-/lib/core-msgs/
 /coverage/
 /.nyc_output/
+
+# cmake build output
+/build/
+
+# generated files
+/lib/core-msgs/
+
+# typescript output
+/lib/**/*.js
+/lib/**/*.js.map
+/lib/**/*.d.ts
+/transport/**/*.js
+/transport/**/*.js.map
+/transport/**/*.d.ts
+
+# webpack output
+/bundle/

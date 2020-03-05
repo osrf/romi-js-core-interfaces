@@ -1,6 +1,7 @@
 import argparse
 import sys
 from os.path import dirname
+from copy import copy
 
 try:
   from rosidl_adapter.parser import (
@@ -18,8 +19,9 @@ __MSG_DIR = 'msg'
 
 __dir__ = dirname(__file__)
 
+
 # These types does not need a 'new' keyword
-__PRIMITIVE_TYPES = {
+PRIMITIVE_TYPES = {
   'bool': 'boolean',
   'byte': 'number',
   'char': 'string',
@@ -37,7 +39,13 @@ __PRIMITIVE_TYPES = {
   'uint64': 'number',
 }
 
-__PRIMITIVE_TYPES_DEFAULT_VALUES = {
+PRIMITIVE_JS_TYPES = [
+  'string',
+  'boolean',
+  'number',
+]
+
+PRIMITIVE_TYPES_DEFAULT_VALUES = {
   'bool': 'false',
   'byte': '0',
   'char': "''",
@@ -55,7 +63,7 @@ __PRIMITIVE_TYPES_DEFAULT_VALUES = {
   'uint64': '0',
 }
 
-__PRIMITIVE_ARRAY_TYPES = {
+PRIMITIVE_ARRAY_TYPES = {
   'byte': 'Uint8Array',
   'float32': 'Float32Array',
   'float64': 'Float64Array',
@@ -68,6 +76,30 @@ __PRIMITIVE_ARRAY_TYPES = {
   'uint32': 'Uint32Array',
   'uint64': 'BigUint64Array',
 }
+
+class JsType():
+  def __init__(self, ros_type):
+    self.is_primitive = False
+    self.is_typed_array = False
+    self.is_array = False
+    if hasattr(ros_type, 'is_array') and ros_type.is_array:
+      self.is_primitive = False
+      self.type = PRIMITIVE_ARRAY_TYPES.get(ros_type.type)
+      if self.type is None:
+        self.type = f'{ros_type.type}[]'
+        self.is_array = True
+        ros_element_type = copy(ros_type)
+        ros_element_type.is_array = False
+        self.element_type = JsType(ros_element_type)
+      else:
+        self.is_typed_array = True
+    else:
+      self.type = PRIMITIVE_TYPES.get(ros_type.type)
+      if self.type is None:
+        self.type = ros_type.type
+      else:
+        self.is_primitive = self.type in PRIMITIVE_JS_TYPES
+
 
 __model_spec = {}
 __parsed_msgs = {}
@@ -92,8 +124,8 @@ def __msgspec_to_parsed_type(self, field_name):
   type_string = field.type.type
 
   if field.type.is_array:
-    if type_string in __PRIMITIVE_ARRAY_TYPES:
-      return __PRIMITIVE_ARRAY_TYPES[type_string]
+    if type_string in PRIMITIVE_ARRAY_TYPES:
+      return PRIMITIVE_ARRAY_TYPES[type_string]
 
     immutable_type = 'List'
     immutable_map_key = None
@@ -112,7 +144,7 @@ def __msgspec_to_parsed_type(self, field_name):
     return f'{immutable_type}<{__PRIMITIVE_TYPES[type_string]}>'
 
   if field.type.is_primitive_type():
-    return __PRIMITIVE_TYPES[type_string]
+    return PRIMITIVE_TYPES[type_string]
 
   return f'{type_string}Record'
 
@@ -138,7 +170,7 @@ def __msgspec_to_default_value(self, field_name):
   type_string = field.type.type
 
   if field.type.is_array:
-    if type_string in __PRIMITIVE_ARRAY_TYPES:
+    if type_string in PRIMITIVE_ARRAY_TYPES:
       return f'new {__PRIMITIVE_ARRAY_TYPES[type_string]}()'
 
     immutable_type = 'List'
@@ -148,7 +180,7 @@ def __msgspec_to_default_value(self, field_name):
     return f'{immutable_type}()'
 
   if field.type.is_primitive_type():
-    return __PRIMITIVE_TYPES_DEFAULT_VALUES[type_string]
+    return PRIMITIVE_TYPES_DEFAULT_VALUES[type_string]
 
   return f'{type_string}Record()'
 
@@ -217,18 +249,6 @@ def mangle_type(ros_type):
   return f'{ros_type.pkg_name}__msg__{ros_type.type}'
 
 
-def ts_type(ros_type):
-  if hasattr(ros_type, 'is_array') and ros_type.is_array:
-    ts_type = __PRIMITIVE_ARRAY_TYPES.get(ros_type.type)
-    if ts_type is None:
-      ts_type = f'{ros_type.type}[]'
-  else:
-    ts_type = __PRIMITIVE_TYPES.get(ros_type.type)
-    if ts_type is None:
-      ts_type = ros_type.type
-  return ts_type
-
-
 def get_full_type_str(ros_type):
   if ros_type.pkg_name is None:
     return ros_type.type
@@ -253,6 +273,7 @@ def parse_packages(ros2_pkgs):
           full_type_str = get_full_type_str(msgspec.base_type)
           __parsed_msgs[full_type_str] = msgspec
           for field in msgspec.fields:
+            field.js_type = JsType(field.type)
             full_type_str = get_full_type_str(field.type)
             if full_type_str not in __parsed_msgs and field.type.pkg_name:
               dependent_pkgs.add(field.type.pkg_name)
@@ -279,7 +300,6 @@ def generate(dstdir):
   template_env.trim_blocks = True
   template_env.keep_trailing_newline = True
   template_env.globals['mangle_type'] = mangle_type
-  template_env.globals['ts_type'] = ts_type
   template = template_env.get_template('ts-definition.j2')
 
   for _, msgspec in __parsed_msgs.items():

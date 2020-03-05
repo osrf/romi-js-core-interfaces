@@ -1,13 +1,13 @@
 {
   "name": "@osrf/romi-js-core-interfaces",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.1",
   "description": "library to interface with components in RoMi",
   "scripts": {
     "build": "npm run build:gen && tsc && webpack",
     "build:gen": "python3 scripts/gentypes.py lib/core-msgs rmf_door_msgs rmf_lift_msgs rmf_fleet_msgs rmf_task_msgs rmf_dispenser_msgs rmf_workcell_msgs building_map_msgs",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "clean": "rm -rf dist lib/core-msgs",
+    "clean": "tsc --build --clean && rm -rf build lib/core-msgs bundle",
     "test": "karma start --single-run",
     "lint": "eslint . --ext .ts,.js",
     "docs": "rm -rf docs && typedoc"
@@ -18,7 +18,9 @@
   },
   "author": "Teo Koon Peng <koonpeng@openrobotics.org>",
   "license": "Apache-2.0",
-  "dependencies": {},
+  "dependencies": {
+    "eventemitter3": "^4.0.0"
+  },
   "devDependencies": {
     "@types/jasmine": "^3.5.4",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
@@ -33,12 +35,17 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "browser": "bundle/romi-js-core-interfaces.js",
   "files": [
-    "dist",
-    "scripts",
-    "templates"
+    "/lib/**/*.js",
+    "/lib/**/*.d.ts",
+    "/transport/**/*.js",
+    "/transport/**/*.d.ts",
+    "/bundle/",
+    "/scripts/",
+    "/templates/"
   ],
   "bin": {
     "generate_romi_msgs": "bin/generate_romi_msgs.js"

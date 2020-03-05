@@ -8,6 +8,49 @@ import { {{ type.type }} } from '../../{{ type.pkg_name }}/msg/{{ type.type }}';
 export class {{ base_type.type }} {
   static readonly typeName = '{{ base_type.pkg_name }}/{{ msgspec.reldir }}/{{ base_type.type }}';
 
+  static fromObject(obj: any): {{ base_type.type }} {
+{% for field in msgspec.fields %}
+    if (obj['{{ field.name }}'] === undefined) {
+      throw new TypeError('missing key "{{ field.name }}"');
+    }
+{% if field.js_type.is_array %}
+    if (!Array.isArray(obj['{{ field.name }}'])) {
+      throw new TypeError('expected "{{ field.name }}" to be an array');
+    }
+{% if field.js_type.element_type.is_primitive %}
+    const {{ field.name }} = (obj['{{ field.name }}'] as []).map(x => {
+      if (typeof obj['{{ field.name }}'] !== '{{ field.js_type.element_type.type }}') {
+        throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}"');
+      }
+      return x;
+    });
+{% else %}
+    const {{ field.name }} = obj['{{ field.name }}'].map(x => {
+      return {{ field.js_type.element_type.type }}.fromObject(x);
+    });
+{% endif %}
+{% elif field.js_type.is_primitive %}
+    if (typeof obj['{{ field.name }}'] !== '{{ field.js_type.type }}') {
+      throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}"');
+    }
+    const {{ field.name }} = obj['{{ field.name }}'];
+{% elif field.js_type.is_typed_array %}
+    if (!(obj['{{ field.name }}'] instanceof {{ field.js_type.type }})) {
+      throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}"');
+    }
+    const {{ field.name }} = obj['{{ field.name }}'];
+{% else %}
+    const {{ field.name }} = {{ field.js_type.type }}.fromObject(obj['{{ field.name }}']);
+{% endif %}
+{% endfor %}
+
+    return new {{ base_type.type }}(
+{% for field in msgspec.fields %}
+      {{ field.name }},
+{% endfor %}
+    );
+  }
+
 {% for const in msgspec.constants %}
   static readonly {{ const.name }} = {{ const.value }};
 {% endfor %}
@@ -16,7 +59,7 @@ export class {{ base_type.type }} {
 {% endif %}
   constructor(
 {% for field in msgspec.fields %}
-    public {{ field.name }}: {{ ts_type(field.type) }},
+    public {{ field.name }}: {{ field.js_type.type }},
 {% endfor %}
   ) { }
 }

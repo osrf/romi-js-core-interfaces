@@ -17,7 +17,7 @@ module.exports = function(config) {
     files: [
       '**/*.js',
       {
-        pattern: '../dist/romi-js-core-interfaces.js',
+        pattern: '../bundle/romi-js-core-interfaces.js',
         type: 'js',
         included: 'true',
       }
