@@ -35,10 +35,17 @@ export class {{ base_type.type }} {
     }
     const {{ field.name }} = obj['{{ field.name }}'];
 {% elif field.js_type.is_typed_array %}
+    let {{ field.name }};
     if (!(obj['{{ field.name }}'] instanceof {{ field.js_type.type }})) {
-      throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}"');
+      if (!Array.isArray(obj['{{ field.name }}'])) {
+        throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}" or an array');
+      } else {
+        obj['{{ field.name }}'].every(x => typeof x === 'number');
+        {{ field.name }} = new Uint8Array([...obj['{{ field.name }}']]);
+      }
+    } else {
+      {{ field.name }} = obj['{{ field.name }}'];
     }
-    const {{ field.name }} = obj['{{ field.name }}'];
 {% else %}
     const {{ field.name }} = {{ field.js_type.type }}.fromObject(obj['{{ field.name }}']);
 {% endif %}

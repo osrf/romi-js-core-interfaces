@@ -4,6 +4,25 @@ import EventEmitter = require('eventemitter3');
 
 export { EventEmitter };
 
+/**
+ * Wrapper around a topic or service that skips validation.
+ *
+ * NOTE: This is unsafe and should only be used when you trust the underlying transport to return
+ * the correct types.
+ */
+export function skipValidation<T extends RomiTopic<unknown> & RomiService<unknown, unknown>>(
+  topicOrService: T,
+): T {
+  const skipValidation = (msg: unknown): unknown => msg;
+  return {
+    validate: topicOrService.validate ? skipValidation : undefined,
+    validateResponse: topicOrService.validateResponse ? topicOrService.validateResponse : undefined,
+    topic: topicOrService.topic ? topicOrService.topic : undefined,
+    service: topicOrService.service ? topicOrService.service : undefined,
+    type: topicOrService.type,
+  } as T;
+}
+
 export class TransportEvents extends EventEmitter<{
   error: [Error];
   close: [];
