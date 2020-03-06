@@ -1,8 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import * as EventEmitter from 'eventemitter3';
+import EventEmitter = require('eventemitter3');
 
 export { EventEmitter };
+
+export class TransportEvents extends EventEmitter<{
+  error: [Error];
+  close: [];
+}> {}
 
 export enum HistoryPolicy {
   SystemDefault,
@@ -55,12 +60,7 @@ export interface RomiService<_Request, Response> {
   readonly service: string;
 }
 
-export type TransportEvents = {
-  error: [Error];
-  close: [];
-};
-
-export interface Transport extends EventEmitter<TransportEvents> {
+export interface Transport extends TransportEvents {
   readonly name: string;
 
   createPublisher<Message extends object>(
