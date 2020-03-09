@@ -18,7 +18,7 @@ export const doorRequests: RomiTopic<msgs.DoorRequest> = {
 
 export const liftStates: RomiTopic<msgs.LiftState> = {
   validate: msg => msgs.LiftState.fromObject(msg),
-  type: msgs.LiftRequest.typeName,
+  type: msgs.LiftState.typeName,
   topic: 'lift_states',
 };
 
