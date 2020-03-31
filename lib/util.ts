@@ -8,6 +8,7 @@ export function toRosTime(date: Date): Time {
   };
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Wrapper around a topic or service that skips validation.
  *
@@ -22,8 +23,12 @@ export function skipValidation<T extends RomiTopic<unknown> | RomiService<unknow
   if ((skipped as any).validate) {
     (skipped as any).validate = skipValidation;
   }
+  if ((skipped as any).validateRequest) {
+    (skipped as any).validateRequest = skipValidation;
+  }
   if ((skipped as any).validateResponse) {
     (skipped as any).validateResponse = skipValidation;
   }
   return skipped;
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */

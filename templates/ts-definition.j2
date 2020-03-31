@@ -8,6 +8,7 @@ import { {{ type.type }} } from '../../{{ type.pkg_name }}/msg/{{ type.type }}';
 export class {{ base_type.type }} {
   static readonly typeName = '{{ base_type.pkg_name }}/{{ msgspec.reldir }}/{{ base_type.type }}';
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   static fromObject(obj: any): {{ base_type.type }} {
 {% for field in msgspec.fields %}
     if (obj['{{ field.name }}'] === undefined) {
@@ -57,6 +58,7 @@ export class {{ base_type.type }} {
 {% endfor %}
     );
   }
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
 {% for const in msgspec.constants %}
   static readonly {{ const.name }} = {{ const.value }};

@@ -1,2 +1,4 @@
-/examples/
-/docs/
+/lib/**/*.js
+/spec/**/*.js
+/transport/**/*.js
+**/*.d.ts

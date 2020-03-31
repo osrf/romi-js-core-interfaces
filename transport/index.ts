@@ -52,12 +52,15 @@ export interface RomiTopic<Message> {
   readonly validate: (msg: any) => Message;
   readonly type: string;
   readonly topic: string;
+  readonly options?: Options;
 }
 
-export interface RomiService<_Request, Response> {
+export interface RomiService<Request, Response> {
+  readonly validateRequest: (msg: any) => Request;
   readonly validateResponse: (msg: any) => Response;
   readonly type: string;
   readonly service: string;
+  readonly options?: Options;
 }
 
 export interface Transport extends TransportEvents {

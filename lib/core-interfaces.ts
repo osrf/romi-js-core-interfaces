@@ -1,6 +1,6 @@
 import { RomiService, RomiTopic } from '../transport';
 import * as msgs from './core-msgs';
-import { GetBuildingMap_Response } from './core-msgs';
+import { GetBuildingMap_Response, GetBuildingMap_Request } from './core-msgs';
 
 // Topics
 
@@ -70,6 +70,7 @@ export const getBuildingMap: RomiService<
   msgs.GetBuildingMap_Request,
   msgs.GetBuildingMap_Response
 > = {
+  validateRequest: msg => GetBuildingMap_Request.fromObject(msg),
   validateResponse: msg => GetBuildingMap_Response.fromObject(msg),
   type: 'building_map_msgs/srv/GetBuildingMap',
   service: 'get_building_map',
