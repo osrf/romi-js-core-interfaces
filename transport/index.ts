@@ -48,6 +48,11 @@ export interface Publisher<Message> {
   publish(msg: Message): void;
 }
 
+export interface Service<Request, Response> {
+  start(handler: (req: Request) => Promise<Response> | Response): void;
+  stop(): void;
+}
+
 export interface RomiTopic<Message> {
   readonly validate: (msg: any) => Message;
   readonly type: string;
@@ -66,21 +71,25 @@ export interface RomiService<Request, Response> {
 export interface Transport extends TransportEvents {
   readonly name: string;
 
-  createPublisher<Message extends object>(
+  createPublisher<Message extends unknown>(
     topic: RomiTopic<Message>,
     options?: Options,
   ): Publisher<Message>;
 
-  subscribe<Message extends object>(
+  subscribe<Message extends unknown>(
     topic: RomiTopic<Message>,
     cb: SubscriptionCb<Message>,
     options?: Options,
   ): Subscription;
 
-  call<Request extends object, Response extends object>(
+  call<Request extends unknown, Response extends unknown>(
     service: RomiService<Request, Response>,
     req: Request,
   ): Promise<Response>;
+
+  createService<Request extends unknown, Response extends unknown>(
+    service: RomiService<Request, Response>,
+  ): Service<Request, Response>;
 
   destroy(): void;
 }

@@ -36,10 +36,10 @@ RoMi-js can be used with either javascript or typescript. One of the main advant
 as opposed to rclnodejs or soss directly is the type information it provides so it is recommended to
 use RoMi-js with typescript if possible.
 
-## Obtaining an Instance of Transport
+## Obtaining an instance of transport
 
 Each transport may have a different way to obtain an instance, in the case of the rclnodejs
-transport, we need to use a `create` async method.
+transport, we need to use a `create` static async method.
 
 ```ts
 import { RclnodejsTransport } from '@osrf/romi-js-rclnodejs-transport';
@@ -49,7 +49,7 @@ async function main() {
 }
 ```
 
-## Receiving Messages
+## Receiving messages
 
 Each transport exposes a subscribe method to start listening to incoming messages, they take in a
 `RomiTopic` which describes the internal interfaces used by ROS2. This package provides the core
@@ -65,7 +65,7 @@ async function main() {
 }
 ```
 
-## Sending Messages
+## Sending messages
 
 Sending messages is a matter of creating a publisher and then calling the publish method. The
 example below will send a request to open a door.
@@ -86,7 +86,7 @@ async function main() {
 }
 ```
 
-## Calling a Service
+## Calling a service
 
 ```ts
 import { RclnodejsTransport } from '@osrf/romi-js-rclnodejs-transport';
@@ -99,13 +99,35 @@ async function main() {
 }
 ```
 
-## Hosting a Service
+## Hosting a service
 
-Not supported yet
+Use `createService` to get a `Service` object that can be used to listen and response to incoming
+requests.
+
+```ts
+import { RclnodejsTransport } from '@osrf/romi-js-rclnodejs-transport';
+import * as RomiCore from '@osrf/romi-js-core-interfaces';
+
+async function main() {
+  const transport = await RclnodejsTransport.create('nodeName');
+  const service = transport.createService(RomiCore.getBuildingMap);
+  service.start(req => {
+    /* do stuff */
+  });
+}
+```
+
+The handler can be an async function
+
+```ts
+service.start(async req => {
+  /* do stuff */
+});
+```
 
 # Advanced Usage
 
-## Skipping Validation
+## Skipping validation
 
 When a message is received RoMi-js checks that it is the correct type, in some cases where
 performance is critical and you know the messages are correct you can skip the validation with a
@@ -117,9 +139,40 @@ import * as RomiCore from '@osrf/romi-js-core-interfaces
 const skipped = RomiCore.skipValidation(RomiCore.fleetStates);
 ```
 
-## Specifying ROS2 QoL Options
+## Specifying ROS2 QoS options
 
-Not supported yet
+Sometimes you may wish to use different QoS options or in some cases there are topics that require
+different QoS options to work.
+
+## Using the underlying transport directly
+
+The `Transport` interface provides an abstraction over common use cases, in some cases, you might
+not want to use the interface as some features or APIs might not be exposed. Due to the flexible
+nature of RoMi-js, it is possible to use the transport directly while still getting some of the
+advantages of RoMi-js.
+
+The example below uses rclnodejs directly.
+
+```ts
+import * as rclnodejs from 'rclnodejs';
+import * as RomiCore from '@osrf/romi-js-core-interfaces';
+
+async function main() {
+  await rclnodejs.init();
+  const node = rclnodejs.createNode('nodeName');
+  const rclOptions = RomiCore.doorStates.options ?
+    RclnodejsTransport.toRclnodejsOptions(RomiCore.doorStates.options) : undefined;
+  const publisher = rclnodejs.createPublisher(
+    RclnodejsTransport.toRclnodejsTypeClass(RomiCore.doorStates),
+    RomiCore.doorStates.topic,
+    rclOptions,
+  );
+}
+```
+
+Note that different transports have different rules as to how the type, topic, service etc are
+interpreted, when using the transport directly, it is up to you to provide arguments that the
+transport understands.
 
 # Building
 
