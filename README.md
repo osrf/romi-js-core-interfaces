@@ -103,6 +103,20 @@ async function main() {
 
 Not supported yet
 
+# Advanced Usage
+
+## Skipping Validation
+
+When a message is received RoMi-js checks that it is the correct type, in some cases where
+performance is critical and you know the messages are correct you can skip the validation with a
+helper method.
+
+```ts
+import * as RomiCore from '@osrf/romi-js-core-interfaces
+
+const skipped = RomiCore.skipValidation(RomiCore.fleetStates);
+```
+
 ## Specifying ROS2 QoL Options
 
 Not supported yet

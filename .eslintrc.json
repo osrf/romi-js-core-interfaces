@@ -43,7 +43,7 @@
       }
     },
     {
-      "files": "./spec/**/*.js",
+      "files": "./spec-browser/**/*.js",
       "env": { "jasmine": true },
       "globals": { "romi_core": "writable" }
     }
