@@ -142,7 +142,9 @@ const skipped = RomiCore.skipValidation(RomiCore.fleetStates);
 ## Specifying ROS2 QoS options
 
 Sometimes you may wish to use different QoS options or in some cases there are topics that require
-different QoS options to work.
+different QoS options to work. If you are using the topics in RomiCore, the expected QoS options
+will be automatically set, to use a different QoS options, just pass in the options in
+`createPublisher` and `subscribe`.
 
 ## Using the underlying transport directly
 
