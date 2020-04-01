@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RomiTopic | @osrf/romi-js-core-interfaces - v0.0.1</title>
+	<title>RomiTopic | @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.1</a>
+					<a href="../index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,7 +57,7 @@
 					<a href="romitopic.html">RomiTopic</a>
 				</li>
 			</ul>
-			<h1>Interface RomiTopic&lt;MessageType&gt;</h1>
+			<h1>Interface RomiTopic&lt;Message&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>MessageType<span class="tsd-signature-symbol">: </span><a href="../globals.html#type" class="tsd-signature-type">Type</a></h4>
+						<h4>Message</h4>
 					</li>
 				</ul>
 			</section>
@@ -87,9 +87,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romitopic.html#messagetype" class="tsd-kind-icon">Message<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romitopic.html#options" class="tsd-kind-icon">options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romitopic.html#topic" class="tsd-kind-icon">topic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romitopic.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romitopic.html#validate" class="tsd-kind-icon">validate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,12 +99,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="messagetype" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Message<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">MessageType</a></div>
+					<a name="options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="options.html" class="tsd-signature-type">Options</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L47">transport/index.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L60">transport/index.ts:60</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -113,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L49">transport/index.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L59">transport/index.ts:59</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -123,9 +124,40 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L48">transport/index.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L58">transport/index.ts:58</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="validate" class="tsd-anchor"></a>
+					<h3>validate</h3>
+					<div class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L57">transport/index.ts:57</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Message</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>msg: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Message</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -145,13 +177,16 @@
 						<a href="romitopic.html" class="tsd-kind-icon">Romi<wbr>Topic</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="romitopic.html#messagetype" class="tsd-kind-icon">Message<wbr>Type</a>
+								<a href="romitopic.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="romitopic.html#topic" class="tsd-kind-icon">topic</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="romitopic.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="romitopic.html#validate" class="tsd-kind-icon">validate</a>
 							</li>
 						</ul>
 					</li>

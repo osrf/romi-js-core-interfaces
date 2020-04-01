@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@osrf/romi-js-core-interfaces - v0.0.1</title>
+	<title>@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.1</a>
+					<a href="index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> @osrf/romi-js-core-interfaces - v0.0.1</h1>
+			<h1> @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</h1>
 		</div>
 	</div>
 </header>
@@ -117,6 +117,7 @@
 								<li class="tsd-kind-class"><a href="classes/tasks.html" class="tsd-kind-icon">Tasks</a></li>
 								<li class="tsd-kind-class"><a href="classes/time.html" class="tsd-kind-icon">Time</a></li>
 								<li class="tsd-kind-class"><a href="classes/trait.html" class="tsd-kind-icon">Trait</a></li>
+								<li class="tsd-kind-class"><a href="classes/transportevents.html" class="tsd-kind-icon">Transport<wbr>Events</a></li>
 								<li class="tsd-kind-class"><a href="classes/workcellconfiguration.html" class="tsd-kind-icon">Workcell<wbr>Configuration</a></li>
 								<li class="tsd-kind-class"><a href="classes/workcellrequest.html" class="tsd-kind-icon">Workcell<wbr>Request</a></li>
 								<li class="tsd-kind-class"><a href="classes/workcellresult.html" class="tsd-kind-icon">Workcell<wbr>Result</a></li>
@@ -131,6 +132,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/qospolicy.html" class="tsd-kind-icon">Qos<wbr>Policy</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/romiservice.html" class="tsd-kind-icon">Romi<wbr>Service</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/romitopic.html" class="tsd-kind-icon">Romi<wbr>Topic</a></li>
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/service.html" class="tsd-kind-icon">Service</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/subscription.html" class="tsd-kind-icon">Subscription</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/transport.html" class="tsd-kind-icon">Transport</a></li>
 							</ul>
@@ -139,12 +141,12 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#subscriptioncb" class="tsd-kind-icon">Subscription<wbr>Cb</a></li>
-								<li class="tsd-kind-type-alias"><a href="globals.html#type" class="tsd-kind-icon">Type</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#skipvalidation" class="tsd-kind-icon">skip<wbr>Validation</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#torostime" class="tsd-kind-icon">to<wbr>Ros<wbr>Time</a></li>
 							</ul>
 						</section>
@@ -175,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">Subscription<wbr>Cb&lt;Message&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L32">transport/index.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L41">transport/index.ts:41</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -206,24 +208,45 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L42">transport/index.ts:42</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-						</ul>
-					</div>
-				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="skipvalidation" class="tsd-anchor"></a>
+					<h3>skip<wbr>Validation</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">skip<wbr>Validation&lt;T&gt;<span class="tsd-signature-symbol">(</span>topicOrService<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/util.ts#L18">lib/util.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Wrapper around a topic or service that skips validation.</p>
+								</div>
+								<p>NOTE: This is unsafe and should only be used when you trust the underlying transport to return
+								the correct types.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="interfaces/romitopic.html" class="tsd-signature-type">RomiTopic</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/romiservice.html" class="tsd-signature-type">RomiService</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>topicOrService: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="torostime" class="tsd-anchor"></a>
 					<h3>to<wbr>Ros<wbr>Time</h3>
@@ -234,7 +257,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/util.ts#L3">util.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/util.ts#L4">lib/util.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -256,26 +279,16 @@
 					<div class="tsd-signature tsd-kind-icon">delivery<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L36">core-interfaces.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L37">lib/core-interfaces.ts:37</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="deliveryrequest.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/delivery.html" class="tsd-signature-type">Delivery</a><span class="tsd-signature-symbol"> =&nbsp;msgs.Delivery</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L37">core-interfaces.ts:37</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="deliveryrequest.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;delivery_requests&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L39">core-interfaces.ts:39</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L40">lib/core-interfaces.ts:40</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -285,9 +298,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.Delivery.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L38">core-interfaces.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L39">lib/core-interfaces.ts:39</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="deliveryrequest.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/delivery.html" class="tsd-signature-type">Delivery</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L38">lib/core-interfaces.ts:38</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/delivery.html" class="tsd-signature-type">Delivery</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -296,26 +332,16 @@
 					<div class="tsd-signature tsd-kind-icon">dispenser<wbr>States<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L54">core-interfaces.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L55">lib/core-interfaces.ts:55</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="dispenserstates.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/dispenserstate.html" class="tsd-signature-type">DispenserState</a><span class="tsd-signature-symbol"> =&nbsp;msgs.DispenserState</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L55">core-interfaces.ts:55</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="dispenserstates.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;dispenser_states&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L57">core-interfaces.ts:57</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L58">lib/core-interfaces.ts:58</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -325,9 +351,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.DispenserState.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L56">core-interfaces.ts:56</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L57">lib/core-interfaces.ts:57</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="dispenserstates.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/dispenserstate.html" class="tsd-signature-type">DispenserState</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L56">lib/core-interfaces.ts:56</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/dispenserstate.html" class="tsd-signature-type">DispenserState</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -336,26 +385,16 @@
 					<div class="tsd-signature tsd-kind-icon">door<wbr>Requests<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L12">core-interfaces.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L13">lib/core-interfaces.ts:13</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="doorrequests.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/doorrequest.html" class="tsd-signature-type">DoorRequest</a><span class="tsd-signature-symbol"> =&nbsp;msgs.DoorRequest</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L13">core-interfaces.ts:13</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="doorrequests.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;door_requests&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L15">core-interfaces.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L16">lib/core-interfaces.ts:16</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -365,9 +404,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.DoorRequest.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L14">core-interfaces.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L15">lib/core-interfaces.ts:15</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="doorrequests.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/doorrequest.html" class="tsd-signature-type">DoorRequest</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L14">lib/core-interfaces.ts:14</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/doorrequest.html" class="tsd-signature-type">DoorRequest</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -376,26 +438,16 @@
 					<div class="tsd-signature tsd-kind-icon">door<wbr>States<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L6">core-interfaces.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L7">lib/core-interfaces.ts:7</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="doorstates.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/doorstate.html" class="tsd-signature-type">DoorState</a><span class="tsd-signature-symbol"> =&nbsp;msgs.DoorState</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L7">core-interfaces.ts:7</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="doorstates.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;door_states&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L9">core-interfaces.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L10">lib/core-interfaces.ts:10</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -405,9 +457,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.DoorState.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L8">core-interfaces.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L9">lib/core-interfaces.ts:9</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="doorstates.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/doorstate.html" class="tsd-signature-type">DoorState</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L8">lib/core-interfaces.ts:8</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/doorstate.html" class="tsd-signature-type">DoorState</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -416,26 +491,16 @@
 					<div class="tsd-signature tsd-kind-icon">fleet<wbr>States<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L48">core-interfaces.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L49">lib/core-interfaces.ts:49</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="fleetstates.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/fleetstate.html" class="tsd-signature-type">FleetState</a><span class="tsd-signature-symbol"> =&nbsp;msgs.FleetState</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L49">core-interfaces.ts:49</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="fleetstates.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;fleet_states&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L51">core-interfaces.ts:51</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L52">lib/core-interfaces.ts:52</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -445,9 +510,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.FleetState.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L50">core-interfaces.ts:50</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L51">lib/core-interfaces.ts:51</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="fleetstates.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/fleetstate.html" class="tsd-signature-type">FleetState</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L50">lib/core-interfaces.ts:50</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/fleetstate.html" class="tsd-signature-type">FleetState</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -456,7 +544,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Building<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L68">core-interfaces.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L69">lib/core-interfaces.ts:69</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -465,7 +553,7 @@
 						<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;get_building_map&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L73">core-interfaces.ts:73</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L76">lib/core-interfaces.ts:76</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -475,9 +563,55 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;building_map_msgs/srv/GetBuildingMap&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L72">core-interfaces.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L75">lib/core-interfaces.ts:75</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="getbuildingmap.validaterequest" class="tsd-anchor"></a>
+						<h3>validate<wbr>Request</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<wbr>Request<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/getbuildingmap_request.html" class="tsd-signature-type">GetBuildingMap_Request</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L73">lib/core-interfaces.ts:73</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/getbuildingmap_request.html" class="tsd-signature-type">GetBuildingMap_Request</a></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="getbuildingmap.validateresponse" class="tsd-anchor"></a>
+						<h3>validate<wbr>Response</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<wbr>Response<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/getbuildingmap_response.html" class="tsd-signature-type">GetBuildingMap_Response</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L74">lib/core-interfaces.ts:74</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/getbuildingmap_response.html" class="tsd-signature-type">GetBuildingMap_Response</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -486,26 +620,16 @@
 					<div class="tsd-signature tsd-kind-icon">lift<wbr>Requests<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L24">core-interfaces.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L25">lib/core-interfaces.ts:25</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="liftrequests.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/liftrequest.html" class="tsd-signature-type">LiftRequest</a><span class="tsd-signature-symbol"> =&nbsp;msgs.LiftRequest</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L25">core-interfaces.ts:25</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="liftrequests.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;lift_requests&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L27">core-interfaces.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L28">lib/core-interfaces.ts:28</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -515,9 +639,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.LiftRequest.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L26">core-interfaces.ts:26</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L27">lib/core-interfaces.ts:27</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="liftrequests.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/liftrequest.html" class="tsd-signature-type">LiftRequest</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L26">lib/core-interfaces.ts:26</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/liftrequest.html" class="tsd-signature-type">LiftRequest</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -526,38 +673,51 @@
 					<div class="tsd-signature tsd-kind-icon">lift<wbr>States<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L18">core-interfaces.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L19">lib/core-interfaces.ts:19</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="liftstates.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/liftstate.html" class="tsd-signature-type">LiftState</a><span class="tsd-signature-symbol"> =&nbsp;msgs.LiftState</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L19">core-interfaces.ts:19</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="liftstates.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;lift_states&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L21">core-interfaces.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L22">lib/core-interfaces.ts:22</a></li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="liftstates.type" class="tsd-anchor"></a>
 						<h3>type</h3>
-						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.LiftRequest.typeName</span></div>
+						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.LiftState.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L20">core-interfaces.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L21">lib/core-interfaces.ts:21</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="liftstates.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/liftstate.html" class="tsd-signature-type">LiftState</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L20">lib/core-interfaces.ts:20</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/liftstate.html" class="tsd-signature-type">LiftState</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -566,26 +726,16 @@
 					<div class="tsd-signature tsd-kind-icon">station<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L30">core-interfaces.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L31">lib/core-interfaces.ts:31</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="stationrequest.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/station.html" class="tsd-signature-type">Station</a><span class="tsd-signature-symbol"> =&nbsp;msgs.Station</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L31">core-interfaces.ts:31</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="stationrequest.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;station_requests&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L33">core-interfaces.ts:33</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L34">lib/core-interfaces.ts:34</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -595,9 +745,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.Station.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L32">core-interfaces.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L33">lib/core-interfaces.ts:33</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="stationrequest.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/station.html" class="tsd-signature-type">Station</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L32">lib/core-interfaces.ts:32</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/station.html" class="tsd-signature-type">Station</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -606,26 +779,16 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Summaries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L42">core-interfaces.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L43">lib/core-interfaces.ts:43</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="tasksummaries.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/tasksummary.html" class="tsd-signature-type">TaskSummary</a><span class="tsd-signature-symbol"> =&nbsp;msgs.TaskSummary</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L43">core-interfaces.ts:43</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="tasksummaries.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;task_summaries&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L45">core-interfaces.ts:45</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L46">lib/core-interfaces.ts:46</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -635,9 +798,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.TaskSummary.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L44">core-interfaces.ts:44</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L45">lib/core-interfaces.ts:45</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="tasksummaries.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/tasksummary.html" class="tsd-signature-type">TaskSummary</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L44">lib/core-interfaces.ts:44</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/tasksummary.html" class="tsd-signature-type">TaskSummary</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal">
@@ -646,26 +832,16 @@
 					<div class="tsd-signature tsd-kind-icon">workcell<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L60">core-interfaces.ts:60</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L61">lib/core-interfaces.ts:61</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="workcellconfiguration.messagetype" class="tsd-anchor"></a>
-						<h3>Message<wbr>Type</h3>
-						<div class="tsd-signature tsd-kind-icon">Message<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="classes/workcellconfiguration.html" class="tsd-signature-type">WorkcellConfiguration</a><span class="tsd-signature-symbol"> =&nbsp;msgs.WorkcellConfiguration</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L61">core-interfaces.ts:61</a></li>
-							</ul>
-						</aside>
-					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="workcellconfiguration.topic" class="tsd-anchor"></a>
 						<h3>topic</h3>
 						<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;workcell_configuration&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L63">core-interfaces.ts:63</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L64">lib/core-interfaces.ts:64</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -675,9 +851,32 @@
 						<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;msgs.WorkcellConfiguration.typeName</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/core-interfaces.ts#L62">core-interfaces.ts:62</a></li>
+								<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L63">lib/core-interfaces.ts:63</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="workcellconfiguration.validate" class="tsd-anchor"></a>
+						<h3>validate</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/workcellconfiguration.html" class="tsd-signature-type">WorkcellConfiguration</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/lib/core-interfaces.ts#L62">lib/core-interfaces.ts:62</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>msg: <span class="tsd-signature-type">any</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="classes/workcellconfiguration.html" class="tsd-signature-type">WorkcellConfiguration</a></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 			</section>
@@ -825,6 +1024,9 @@
 						<a href="classes/trait.html" class="tsd-kind-icon">Trait</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/transportevents.html" class="tsd-kind-icon">Transport<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/workcellconfiguration.html" class="tsd-kind-icon">Workcell<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -851,6 +1053,9 @@
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/romitopic.html" class="tsd-kind-icon">Romi<wbr>Topic</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/service.html" class="tsd-kind-icon">Service</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/subscription.html" class="tsd-kind-icon">Subscription</a>
 					</li>
@@ -860,8 +1065,8 @@
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#subscriptioncb" class="tsd-kind-icon">Subscription<wbr>Cb</a>
 					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#type" class="tsd-kind-icon">Type</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#skipvalidation" class="tsd-kind-icon">skip<wbr>Validation</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#torostime" class="tsd-kind-icon">to<wbr>Ros<wbr>Time</a>

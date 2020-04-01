@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@osrf/romi-js-core-interfaces - v0.0.1</title>
+	<title>@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.1</a>
+					<a href="index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> @osrf/romi-js-core-interfaces - v0.0.1</h1>
+			<h1> @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</h1>
 		</div>
 	</div>
 </header>
@@ -62,14 +62,174 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<a href="#about-romi-js" id="about-romi-js" style="color: inherit; text-decoration: none;">
+					<h1>About RoMi-js</h1>
+				</a>
+				<p>RoMi-js is a set of libraries to make it easier to interface with RoMi with nodejs or in the
+				browser.</p>
+				<a href="#installing" id="installing" style="color: inherit; text-decoration: none;">
+					<h1>Installing</h1>
+				</a>
+				<pre><code><span class="hljs-built_in">npm</span> install @osrf/romi-js-core-interfaces</code></pre>
+				<a href="#using-romi-js" id="using-romi-js" style="color: inherit; text-decoration: none;">
+					<h1>Using RoMi-js</h1>
+				</a>
+				<p>RoMi-js aims to provide an easy to use and flexible architecture. There are 2 main components in
+					RoMi-js, the interfaces which describes the topics and messages that connects to RoMi and a
+				transport that facilite the sending and receiving of these messages.</p>
+				<p>To use RoMi-js, first you have to choose a transport library suitable for your use case. Currently
+					there are 2 transport libraries available using rclnodejs and soss, rclnodejs only works on node
+				while soss only works on the browser. Install one of them depending on your use case</p>
+				<pre><code><span class="hljs-built_in">npm</span> install @osrf/romi-js-rclnodejs-transport</code></pre><p>or</p>
+				<pre><code><span class="hljs-built_in">npm</span> install @osrf/romi-js-soss-transport</code></pre><p>This example will use <code>@osrf/romi-js-rclnodejs-transport</code> but the code for other transports will be
+				almost the same.</p>
+				<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
+					<h2>Typescript</h2>
+				</a>
+				<p>RoMi-js can be used with either javascript or typescript. One of the main advantage of using RoMi-js
+					as opposed to rclnodejs or soss directly is the type information it provides so it is recommended to
+				use RoMi-js with typescript if possible.</p>
+				<a href="#obtaining-an-instance-of-transport" id="obtaining-an-instance-of-transport" style="color: inherit; text-decoration: none;">
+					<h2>Obtaining an instance of transport</h2>
+				</a>
+				<p>Each transport may have a different way to obtain an instance, in the case of the rclnodejs
+				transport, we need to use a <code>create</code> static async method.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { RclnodejsTransport } <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-rclnodejs-transport'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> transport = <span class="hljs-keyword">await</span> RclnodejsTransport.create(<span class="hljs-string">'nodeName'</span>);
+}</code></pre>
+				<a href="#receiving-messages" id="receiving-messages" style="color: inherit; text-decoration: none;">
+					<h2>Receiving messages</h2>
+				</a>
+				<p>Each transport exposes a subscribe method to start listening to incoming messages, they take in a
+					<code>RomiTopic</code> which describes the internal interfaces used by ROS2. This package provides the core
+				interfaces used by RoMi, here is an example that subscribes and prints out the fleet state.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { RclnodejsTransport } <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-rclnodejs-transport'</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> RomiCore <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-core-interfaces'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> transport = <span class="hljs-keyword">await</span> RclnodejsTransport.create(<span class="hljs-string">'nodeName'</span>);
+  transport.subscribe(RomiCore.fleetStates, <span class="hljs-function"><span class="hljs-params">fleetState</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(fleetState));
+}</code></pre>
+				<a href="#sending-messages" id="sending-messages" style="color: inherit; text-decoration: none;">
+					<h2>Sending messages</h2>
+				</a>
+				<p>Sending messages is a matter of creating a publisher and then calling the publish method. The
+				example below will send a request to open a door.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { RclnodejsTransport } <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-rclnodejs-transport'</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> RomiCore <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-core-interfaces'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> transport = <span class="hljs-keyword">await</span> RclnodejsTransport.create(<span class="hljs-string">'nodeName'</span>);
+  <span class="hljs-keyword">const</span> publisher = transport.createPublisher(RomiCore.doorRequests);
+  publisher.publish({
+    door_name: <span class="hljs-string">'doorName'</span>,
+    request_time: RomiCore.toRosTime(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()),
+    requested_mode: { value: RomiCore.DoorMode.MODE_OPEN },
+    requester_id: <span class="hljs-string">'nodeName'</span>,
+  });
+}</code></pre>
+				<a href="#calling-a-service" id="calling-a-service" style="color: inherit; text-decoration: none;">
+					<h2>Calling a service</h2>
+				</a>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { RclnodejsTransport } <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-rclnodejs-transport'</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> RomiCore <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-core-interfaces'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> transport = <span class="hljs-keyword">await</span> RclnodejsTransport.create(<span class="hljs-string">'nodeName'</span>);
+  <span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> transport.call(RomiCore.getBuildingMap, {});
+  <span class="hljs-keyword">const</span> buildingMap = resp.building_map;
+}</code></pre>
+				<a href="#hosting-a-service" id="hosting-a-service" style="color: inherit; text-decoration: none;">
+					<h2>Hosting a service</h2>
+				</a>
+				<p>Use <code>createService</code> to get a <code>Service</code> object that can be used to listen and response to incoming
+				requests.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { RclnodejsTransport } <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-rclnodejs-transport'</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> RomiCore <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-core-interfaces'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> transport = <span class="hljs-keyword">await</span> RclnodejsTransport.create(<span class="hljs-string">'nodeName'</span>);
+  <span class="hljs-keyword">const</span> service = transport.createService(RomiCore.getBuildingMap);
+  service.start(<span class="hljs-function"><span class="hljs-params">req</span> =&gt;</span> {
+    <span class="hljs-comment">/* do stuff */</span>
+  });
+}</code></pre>
+				<p>The handler can be an async function</p>
+				<pre><code class="language-ts">service.start(<span class="hljs-keyword">async</span> req =&gt; {
+  <span class="hljs-comment">/* do stuff */</span>
+});</code></pre>
+				<a href="#advanced-usage" id="advanced-usage" style="color: inherit; text-decoration: none;">
+					<h1>Advanced Usage</h1>
+				</a>
+				<a href="#skipping-validation" id="skipping-validation" style="color: inherit; text-decoration: none;">
+					<h2>Skipping validation</h2>
+				</a>
+				<p>When a message is received RoMi-js checks that it is the correct type, in some cases where
+					performance is critical and you know the messages are correct you can skip the validation with a
+				helper method.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> RomiCore <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-core-interfaces'</span>
+
+<span class="hljs-keyword">const</span> skipped = RomiCore.skipValidation(RomiCore.fleetStates);</code></pre>
+				<a href="#specifying-ros2-qos-options" id="specifying-ros2-qos-options" style="color: inherit; text-decoration: none;">
+					<h2>Specifying ROS2 QoS options</h2>
+				</a>
+				<p>Sometimes you may wish to use different QoS options or in some cases there are topics that require
+				different QoS options to work.</p>
+				<a href="#using-the-underlying-transport-directly" id="using-the-underlying-transport-directly" style="color: inherit; text-decoration: none;">
+					<h2>Using the underlying transport directly</h2>
+				</a>
+				<p>The <code>Transport</code> interface provides an abstraction over common use cases, in some cases, you might
+					not want to use the interface as some features or APIs might not be exposed. Due to the flexible
+					nature of RoMi-js, it is possible to use the transport directly while still getting some of the
+				advantages of RoMi-js.</p>
+				<p>The example below uses rclnodejs directly.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> rclnodejs <span class="hljs-keyword">from</span> <span class="hljs-string">'rclnodejs'</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> RomiCore <span class="hljs-keyword">from</span> <span class="hljs-string">'@osrf/romi-js-core-interfaces'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">await</span> rclnodejs.init();
+  <span class="hljs-keyword">const</span> node = rclnodejs.createNode(<span class="hljs-string">'nodeName'</span>);
+  <span class="hljs-keyword">const</span> rclOptions = RomiCore.doorStates.options ?
+    RclnodejsTransport.toRclnodejsOptions(RomiCore.doorStates.options) : <span class="hljs-literal">undefined</span>;
+  <span class="hljs-keyword">const</span> publisher = rclnodejs.createPublisher(
+    RclnodejsTransport.toRclnodejsTypeClass(RomiCore.doorStates),
+    RomiCore.doorStates.topic,
+    rclOptions,
+  );
+}</code></pre>
+				<p>Note that different transports have different rules as to how the type, topic, service etc are
+					interpreted, when using the transport directly, it is up to you to provide arguments that the
+				transport understands.</p>
 				<a href="#building" id="building" style="color: inherit; text-decoration: none;">
 					<h1>Building</h1>
 				</a>
-				<p>This library depends on <a href="https://github.com/osrf/rmf_core">rmf_core</a>.</p>
-				<p>To build the library, make sure <code>rmf_core</code> is sourced, then run <code>npm run build</code>. Alternatively, you
-				can build it in a colcon workspace along with <code>rmf_core</code>.</p>
-				<p>After confirming this package is built correctly, Install this library as a npm module:</p>
-				<pre><code>npm <span class="hljs-keyword">install</span> &lt;<span class="hljs-keyword">path</span>&gt;</code></pre>
+				<p>This package can be built using colcon or npm, it is recommended to build with colcon as that has
+				the advantage of making sure the dependencies are up to date.</p>
+				<a href="#using-colcon" id="using-colcon" style="color: inherit; text-decoration: none;">
+					<h2>Using colcon</h2>
+				</a>
+				<p>Create a colcon workspace.</p>
+				<pre><code><span class="hljs-built_in">mkdir</span> -p colcon_ws/src</code></pre><p>Refer to the <a href="https://colcon.readthedocs.io/en/released/">colcon documentation</a> for more details on
+				how a colcon workspace works.</p>
+				<p>Checkout the required dependencies.</p>
+				<pre><code>cd colcon_ws/src
+git <span class="hljs-keyword">clone</span> <span class="hljs-title">--depth</span> <span class="hljs-number">1</span> https://github.com/osrf/rmf_core.git
+git <span class="hljs-keyword">clone</span> <span class="hljs-title">--depth</span> <span class="hljs-number">1</span> https://github.com/osrf/traffic_editor
+git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/osrf/romi-js-core-interfaces</code></pre><p>Refer to the documentations of <a href="https://github.com/osrf/rmf_core#Installation">rmf_core</a> and
+					<a href="https://github.com/osrf/traffic_editor#Installation">traffic_editor</a> to prepare the workspace to
+				build them.</p>
+				<p>Run colcon in the workspace directory.</p>
+				<pre><code><span class="hljs-attr">cd</span> <span class="hljs-string">colcon_ws</span>
+<span class="hljs-attr">colcon</span> <span class="hljs-string">build</span></code></pre>
+				<a href="#using-npm" id="using-npm" style="color: inherit; text-decoration: none;">
+					<h2>Using npm</h2>
+				</a>
+				<p>Follow the instructions of <a href="https://github.com/osrf/rmf_core#Installation">rmf_core</a> and
+				<a href="https://github.com/osrf/traffic_editor#Installation">traffic_editor</a> to build and install them.</p>
+				<p>Build and install with npm</p>
+				<pre><code>npm <span class="hljs-keyword">install</span></code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -215,6 +375,9 @@
 						<a href="classes/trait.html" class="tsd-kind-icon">Trait</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/transportevents.html" class="tsd-kind-icon">Transport<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/workcellconfiguration.html" class="tsd-kind-icon">Workcell<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -241,6 +404,9 @@
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/romitopic.html" class="tsd-kind-icon">Romi<wbr>Topic</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/service.html" class="tsd-kind-icon">Service</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/subscription.html" class="tsd-kind-icon">Subscription</a>
 					</li>
@@ -250,8 +416,8 @@
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#subscriptioncb" class="tsd-kind-icon">Subscription<wbr>Cb</a>
 					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#type" class="tsd-kind-icon">Type</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#skipvalidation" class="tsd-kind-icon">skip<wbr>Validation</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#torostime" class="tsd-kind-icon">to<wbr>Ros<wbr>Time</a>

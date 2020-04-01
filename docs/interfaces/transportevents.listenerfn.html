@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>QosPolicy | @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
+	<title>ListenerFn | @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,82 +54,56 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="qospolicy.html">QosPolicy</a>
+					<a href="../classes/transportevents.html">TransportEvents</a>
+				</li>
+				<li>
+					<a href="transportevents.listenerfn.html">ListenerFn</a>
 				</li>
 			</ul>
-			<h1>Interface QosPolicy</h1>
+			<h1>Interface ListenerFn&lt;Args&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>Args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">QosPolicy</span>
+						<span class="target">ListenerFn</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="qospolicy.html#depth" class="tsd-kind-icon">depth</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="qospolicy.html#durabilitypolicy" class="tsd-kind-icon">durability<wbr>Policy</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="qospolicy.html#historypolicy" class="tsd-kind-icon">history<wbr>Policy</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="qospolicy.html#reliabilitypolicy" class="tsd-kind-icon">reliability<wbr>Policy</a></li>
+			<section class="tsd-panel">
+				<h3 class="tsd-before-signature">Callable</h3>
+				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-class tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Args</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in node_modules/eventemitter3/index.d.ts:56</li>
 							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="depth" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> depth</h3>
-					<div class="tsd-signature tsd-kind-icon">depth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L34">transport/index.ts:34</a></li>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">Args</span></h5>
+							</li>
 						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="durabilitypolicy" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> durability<wbr>Policy</h3>
-					<div class="tsd-signature tsd-kind-icon">durability<wbr>Policy<span class="tsd-signature-symbol">:</span> <a href="../enums/durabilitypolicy.html" class="tsd-signature-type">DurabilityPolicy</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L33">transport/index.ts:33</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="historypolicy" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> history<wbr>Policy</h3>
-					<div class="tsd-signature tsd-kind-icon">history<wbr>Policy<span class="tsd-signature-symbol">:</span> <a href="../enums/historypolicy.html" class="tsd-signature-type">HistoryPolicy</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L31">transport/index.ts:31</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="reliabilitypolicy" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reliability<wbr>Policy</h3>
-					<div class="tsd-signature tsd-kind-icon">reliability<wbr>Policy<span class="tsd-signature-symbol">:</span> <a href="../enums/reliabilitypolicy.html" class="tsd-signature-type">ReliabilityPolicy</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L32">transport/index.ts:32</a></li>
-						</ul>
-					</aside>
-				</section>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -144,20 +118,50 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="qospolicy.html" class="tsd-kind-icon">Qos<wbr>Policy</a>
+					<li class="current tsd-kind-class">
+						<a href="../classes/transportevents.html" class="tsd-kind-icon">Transport<wbr>Events</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="qospolicy.html#depth" class="tsd-kind-icon">depth</a>
+							<li class=" tsd-kind-interface tsd-parent-kind-class">
+								<a href="transportevents.eventemitterstatic.html" class="tsd-kind-icon">Event<wbr>Emitter<wbr>Static</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="qospolicy.html#durabilitypolicy" class="tsd-kind-icon">durability<wbr>Policy</a>
+							<li class="current tsd-kind-interface tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="transportevents.listenerfn.html" class="tsd-kind-icon">Listener<wbr>Fn</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="qospolicy.html#historypolicy" class="tsd-kind-icon">history<wbr>Policy</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="../classes/transportevents.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="qospolicy.html#reliabilitypolicy" class="tsd-kind-icon">reliability<wbr>Policy</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="../classes/transportevents.html#prefixed" class="tsd-kind-icon">prefixed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#emit" class="tsd-kind-icon">emit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="../classes/transportevents.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="../classes/transportevents.html#listenercount" class="tsd-kind-icon">listener<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#listeners" class="tsd-kind-icon">listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#off" class="tsd-kind-icon">off</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#on" class="tsd-kind-icon">on</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#once" class="tsd-kind-icon">once</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="../classes/transportevents.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="../classes/transportevents.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
 							</li>
 						</ul>
 					</li>

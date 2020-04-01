@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RomiService | @osrf/romi-js-core-interfaces - v0.0.1</title>
+	<title>RomiService | @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.1</a>
+					<a href="../index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,7 +57,7 @@
 					<a href="romiservice.html">RomiService</a>
 				</li>
 			</ul>
-			<h1>Interface RomiService&lt;RequestType, ResponseType&gt;</h1>
+			<h1>Interface RomiService&lt;Request, Response&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -68,10 +68,10 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>RequestType<span class="tsd-signature-symbol">: </span><a href="../globals.html#type" class="tsd-signature-type">Type</a></h4>
+						<h4>Request</h4>
 					</li>
 					<li>
-						<h4>ResponseType<span class="tsd-signature-symbol">: </span><a href="../globals.html#type" class="tsd-signature-type">Type</a></h4>
+						<h4>Response</h4>
 					</li>
 				</ul>
 			</section>
@@ -90,10 +90,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#requesttype" class="tsd-kind-icon">Request<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#responsetype" class="tsd-kind-icon">Response<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#options" class="tsd-kind-icon">options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#service" class="tsd-kind-icon">service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#validaterequest" class="tsd-kind-icon">validate<wbr>Request</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="romiservice.html#validateresponse" class="tsd-kind-icon">validate<wbr>Response</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,22 +103,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="requesttype" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Request<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Request<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">RequestType</a></div>
+					<a name="options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="options.html" class="tsd-signature-type">Options</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L53">transport/index.ts:53</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="responsetype" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Response<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Response<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">ResponseType</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L54">transport/index.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L68">transport/index.ts:68</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L56">transport/index.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L67">transport/index.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,9 +128,71 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/2685e07/lib/transport/index.ts#L55">transport/index.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L66">transport/index.ts:66</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="validaterequest" class="tsd-anchor"></a>
+					<h3>validate<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">validate<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L64">transport/index.ts:64</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>msg: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Request</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="validateresponse" class="tsd-anchor"></a>
+					<h3>validate<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">validate<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/osrf/romi-js-core-interfaces/blob/796d26c/transport/index.ts#L65">transport/index.ts:65</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>msg: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Response</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -159,16 +212,19 @@
 						<a href="romiservice.html" class="tsd-kind-icon">Romi<wbr>Service</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="romiservice.html#requesttype" class="tsd-kind-icon">Request<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="romiservice.html#responsetype" class="tsd-kind-icon">Response<wbr>Type</a>
+								<a href="romiservice.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="romiservice.html#service" class="tsd-kind-icon">service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="romiservice.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="romiservice.html#validaterequest" class="tsd-kind-icon">validate<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="romiservice.html#validateresponse" class="tsd-kind-icon">validate<wbr>Response</a>
 							</li>
 						</ul>
 					</li>
