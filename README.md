@@ -134,7 +134,7 @@ performance is critical and you know the messages are correct you can skip the v
 helper method.
 
 ```ts
-import * as RomiCore from '@osrf/romi-js-core-interfaces
+import * as RomiCore from '@osrf/romi-js-core-interfaces'
 
 const skipped = RomiCore.skipValidation(RomiCore.fleetStates);
 ```
