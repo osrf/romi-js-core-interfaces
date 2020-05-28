@@ -52,7 +52,7 @@ export const deliveryRequest: RomiTopic<msgs.Delivery> = {
   topic: 'delivery_requests',
 };
 
-export const loop: RomiTopic<msgs.Loop> = {
+export const loopRequests: RomiTopic<msgs.Loop> = {
   validate: msg => msgs.Loop.fromObject(msg),
   type: msgs.Loop.typeName,
   topic: 'loop_requests',
