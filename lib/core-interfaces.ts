@@ -22,6 +22,12 @@ export const adapterDoorRequests: RomiTopic<msgs.DoorRequest> = {
   topic: 'adapter_door_requests',
 };
 
+export const doorSupervisorHeartBeat: RomiTopic<msgs.SupervisorHeartbeat> = {
+  validate: msg => msgs.SupervisorHeartbeat.fromObject(msg),
+  type: msgs.SupervisorHeartbeat.typeName,
+  topic: 'door_supervisor_heartbeat',
+};
+
 export const liftStates: RomiTopic<msgs.LiftState> = {
   validate: msg => msgs.LiftState.fromObject(msg),
   type: msgs.LiftState.typeName,
