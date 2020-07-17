@@ -118,6 +118,12 @@ export const workcellConfiguration: RomiTopic<msgs.WorkcellConfiguration> = {
   topic: 'workcell_configuration',
 };
 
+export const negotiationStatuses: RomiTopic<msgs.NegotiationStatus> = {
+  validate: msg => msgs.NegotiationStatus.fromObject(msg),
+  type: msgs.NegotiationStatus.typeName,
+  topic: 'negotiation_status',
+};
+
 // Services
 
 export const getBuildingMap: RomiService<
