@@ -42,7 +42,7 @@ export class {{ base_type.type }} {
         throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}" or an array');
       } else {
         obj['{{ field.name }}'].every(x => typeof x === 'number');
-        {{ field.name }} = new Uint8Array([...obj['{{ field.name }}']]);
+        {{ field.name }} = new {{ field.js_type.type }}([...obj['{{ field.name }}']]);
       }
     } else {
       {{ field.name }} = obj['{{ field.name }}'];
