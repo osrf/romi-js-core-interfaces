@@ -1,4 +1,5 @@
 /node_modules/
+/colcon_ws/
 /coverage/
 /.nyc_output/
 

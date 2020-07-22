@@ -11,7 +11,11 @@
     "test": "jasmine",
     "test:browser": "karma start --single-run",
     "lint": "eslint --ext ts,js lib spec transport",
-    "docs": "rm -rf docs && typedoc"
+    "docs": "rm -rf docs && typedoc",
+    "build:prepare":"chmod u+x scripts/build-prepare.sh && scripts/build-prepare.sh",
+    "build:project":"chmod u+x scripts/build-project.sh && scripts/build-project.sh",
+    "compress": "chmod u+x scripts/prepare-gen.sh && scripts/prepare-gen.sh",
+    "update:gen": "npm run-script build:prepare && npm run-script build:project && npm run-script prepare:gen"
   },
   "repository": {
     "type": "git",
