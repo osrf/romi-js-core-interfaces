@@ -4,6 +4,7 @@
   "description": "library to interface with components in RoMi",
   "scripts": {
     "build": "npm run build:gen && tsc && webpack",
+    "build:colcon": "cd colcon_ws && colcon build",
     "build:gen": "python3 scripts/gentypes.py lib/core-msgs rmf_door_msgs rmf_lift_msgs rmf_fleet_msgs rmf_task_msgs rmf_dispenser_msgs rmf_workcell_msgs building_map_msgs",
     "prepare": "npm run build",
     "watch": "tsc --watch",
@@ -12,10 +13,7 @@
     "test:browser": "karma start --single-run",
     "lint": "eslint --ext ts,js lib spec transport",
     "docs": "rm -rf docs && typedoc",
-    "build:prepare":"chmod u+x scripts/build-prepare.sh && scripts/build-prepare.sh",
-    "build:project":"chmod u+x scripts/build-project.sh && scripts/build-project.sh",
-    "compress": "chmod u+x scripts/prepare-gen.sh && scripts/prepare-gen.sh",
-    "update:gen": "npm run-script build:prepare && npm run-script build:project && npm run-script prepare:gen"
+    "sync": "chmod u+x scripts/sync.sh && scripts/sync.sh"
   },
   "repository": {
     "type": "git",
