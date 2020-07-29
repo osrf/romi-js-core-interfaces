@@ -1,16 +1,16 @@
 {
   "name": "@osrf/romi-js-core-interfaces",
-  "version": "0.0.2-alpha.7",
+  "version": "0.0.2-alpha-7",
   "description": "library to interface with components in RoMi",
   "scripts": {
     "build": "npm run build:gen && tsc && webpack",
-    "build:gen": "python3 scripts/gentypes.py lib/core-msgs rmf_door_msgs rmf_lift_msgs rmf_fleet_msgs rmf_task_msgs rmf_dispenser_msgs rmf_workcell_msgs building_map_msgs",
+    "build:gen": "python3 bin/gentypes.py lib/core-msgs rmf_door_msgs rmf_lift_msgs rmf_fleet_msgs rmf_task_msgs rmf_dispenser_msgs rmf_workcell_msgs building_map_msgs",
     "prepare": "npm run build",
     "watch": "tsc --watch",
     "clean": "tsc --build --clean && rm -rf build lib/core-msgs bundle",
     "test": "jasmine",
     "test:browser": "karma start --single-run",
-    "lint": "eslint --ext ts,js lib spec transport",
+    "lint": "eslint --ext ts,js lib spec transport scripts",
     "docs": "rm -rf docs && typedoc"
   },
   "repository": {
@@ -45,10 +45,10 @@
     "/transport/**/*.js",
     "/transport/**/*.d.ts",
     "/bundle/",
-    "/scripts/",
+    "/bin/",
     "/templates/"
   ],
   "bin": {
-    "generate_romi_msgs": "bin/generate_romi_msgs.js"
+    "gentypes": "bin/gentypes.py"
   }
 }
