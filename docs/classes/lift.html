@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lift | @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
+	<title>Lift | @osrf/romi-js-core-interfaces - v0.0.2-alpha-7</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</a>
+					<a href="../index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha-7</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -85,6 +85,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#depth" class="tsd-kind-icon">depth</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#doors" class="tsd-kind-icon">doors</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#levels" class="tsd-kind-icon">levels</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#name" class="tsd-kind-icon">name</a></li>
@@ -92,6 +93,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#ref_y" class="tsd-kind-icon">ref_<wbr>y</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#ref_yaw" class="tsd-kind-icon">ref_<wbr>yaw</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#wall_graph" class="tsd-kind-icon">wall_<wbr>graph</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lift.html#width" class="tsd-kind-icon">width</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="lift.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
 							</ul>
 						</section>
@@ -110,13 +112,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Lift<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, levels<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, doors<span class="tsd-signature-symbol">: </span><a href="door.html" class="tsd-signature-type">Door</a><span class="tsd-signature-symbol">[]</span>, wall_graph<span class="tsd-signature-symbol">: </span><a href="graph.html" class="tsd-signature-type">Graph</a>, ref_x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ref_y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ref_yaw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lift.html" class="tsd-signature-type">Lift</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Lift<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, levels<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, doors<span class="tsd-signature-symbol">: </span><a href="door.html" class="tsd-signature-type">Door</a><span class="tsd-signature-symbol">[]</span>, wall_graph<span class="tsd-signature-symbol">: </span><a href="graph.html" class="tsd-signature-type">Graph</a>, ref_x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ref_y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ref_yaw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, depth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lift.html" class="tsd-signature-type">Lift</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:74</li>
+									<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:90</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -142,6 +144,12 @@
 								<li>
 									<h5>ref_yaw: <span class="tsd-signature-type">number</span></h5>
 								</li>
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>depth: <span class="tsd-signature-type">number</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="lift.html" class="tsd-signature-type">Lift</a></h4>
 						</li>
@@ -151,12 +159,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="depth" class="tsd-anchor"></a>
+					<h3>depth</h3>
+					<div class="tsd-signature tsd-kind-icon">depth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:102</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="doors" class="tsd-anchor"></a>
 					<h3>doors</h3>
 					<div class="tsd-signature tsd-kind-icon">doors<span class="tsd-signature-symbol">:</span> <a href="door.html" class="tsd-signature-type">Door</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:80</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:96</li>
 						</ul>
 					</aside>
 				</section>
@@ -166,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">levels<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:79</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:95</li>
 						</ul>
 					</aside>
 				</section>
@@ -176,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:78</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:94</li>
 						</ul>
 					</aside>
 				</section>
@@ -186,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">ref_<wbr>x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:82</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:98</li>
 						</ul>
 					</aside>
 				</section>
@@ -196,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">ref_<wbr>y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:83</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:99</li>
 						</ul>
 					</aside>
 				</section>
@@ -206,7 +224,7 @@
 					<div class="tsd-signature tsd-kind-icon">ref_<wbr>yaw<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:84</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:100</li>
 						</ul>
 					</aside>
 				</section>
@@ -216,7 +234,17 @@
 					<div class="tsd-signature tsd-kind-icon">wall_<wbr>graph<span class="tsd-signature-symbol">:</span> <a href="graph.html" class="tsd-signature-type">Graph</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:81</li>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:97</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="width" class="tsd-anchor"></a>
+					<h3>width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/core-msgs/building_map_msgs/msg/Lift.ts:101</li>
 						</ul>
 					</aside>
 				</section>
@@ -277,6 +305,9 @@
 								<a href="lift.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="lift.html#depth" class="tsd-kind-icon">depth</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="lift.html#doors" class="tsd-kind-icon">doors</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -296,6 +327,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="lift.html#wall_graph" class="tsd-kind-icon">wall_<wbr>graph</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="lift.html#width" class="tsd-kind-icon">width</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="lift.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
