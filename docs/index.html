@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</title>
+	<title>@osrf/romi-js-core-interfaces - v0.0.2-alpha-7</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha.4</a>
+					<a href="index.html" class="title">@osrf/romi-js-core-interfaces - v0.0.2-alpha-7</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> @osrf/romi-js-core-interfaces - v0.0.2-alpha.4</h1>
+			<h1> @osrf/romi-js-core-interfaces - v0.0.2-alpha-7</h1>
 		</div>
 	</div>
 </header>
@@ -176,7 +176,9 @@
 					<h2>Specifying ROS2 QoS options</h2>
 				</a>
 				<p>Sometimes you may wish to use different QoS options or in some cases there are topics that require
-				different QoS options to work.</p>
+					different QoS options to work. If you are using the topics in RomiCore, the expected QoS options
+					will be automatically set, to use a different QoS options, just pass in the options in
+				<code>createPublisher</code> and <code>subscribe</code>.</p>
 				<a href="#using-the-underlying-transport-directly" id="using-the-underlying-transport-directly" style="color: inherit; text-decoration: none;">
 					<h2>Using the underlying transport directly</h2>
 				</a>
@@ -252,6 +254,18 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="enums/reliabilitypolicy.html" class="tsd-kind-icon">Reliability<wbr>Policy</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/accel.html" class="tsd-kind-icon">Accel</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/accelstamped.html" class="tsd-kind-icon">Accel<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/accelwithcovariance.html" class="tsd-kind-icon">Accel<wbr>With<wbr>Covariance</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/accelwithcovariancestamped.html" class="tsd-kind-icon">Accel<wbr>With<wbr>Covariance<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/affineimage.html" class="tsd-kind-icon">Affine<wbr>Image</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -264,7 +278,31 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="classes/behaviorparameter.html" class="tsd-kind-icon">Behavior<wbr>Parameter</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/bool.html" class="tsd-kind-icon">Bool</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/buildingmap.html" class="tsd-kind-icon">Building<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/byte.html" class="tsd-kind-icon">Byte</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/bytemultiarray.html" class="tsd-kind-icon">Byte<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/char.html" class="tsd-kind-icon">Char</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/circle.html" class="tsd-kind-icon">Circle</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/colorrgba.html" class="tsd-kind-icon">ColorRGBA</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/convexshape.html" class="tsd-kind-icon">Convex<wbr>Shape</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/convexshapecontext.html" class="tsd-kind-icon">Convex<wbr>Shape<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/delivery.html" class="tsd-kind-icon">Delivery</a>
@@ -294,13 +332,31 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="classes/doorrequest.html" class="tsd-kind-icon">Door<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/doorsessions.html" class="tsd-kind-icon">Door<wbr>Sessions</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/doorstate.html" class="tsd-kind-icon">Door<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/duration.html" class="tsd-kind-icon">Duration</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/empty.html" class="tsd-kind-icon">Empty</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/fleetstate.html" class="tsd-kind-icon">Fleet<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/float32.html" class="tsd-kind-icon">Float32</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/float32multiarray.html" class="tsd-kind-icon">Float32<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/float64.html" class="tsd-kind-icon">Float64</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/float64multiarray.html" class="tsd-kind-icon">Float64<wbr>Multi<wbr>Array</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/getbuildingmap.html" class="tsd-kind-icon">Get<wbr>Building<wbr>Map</a>
@@ -321,6 +377,57 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="classes/graphnode.html" class="tsd-kind-icon">Graph<wbr>Node</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/header.html" class="tsd-kind-icon">Header</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/inertia.html" class="tsd-kind-icon">Inertia</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/inertiastamped.html" class="tsd-kind-icon">Inertia<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int16.html" class="tsd-kind-icon">Int16</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int16multiarray.html" class="tsd-kind-icon">Int16<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int32.html" class="tsd-kind-icon">Int32</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int32multiarray.html" class="tsd-kind-icon">Int32<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int64.html" class="tsd-kind-icon">Int64</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int64multiarray.html" class="tsd-kind-icon">Int64<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int8.html" class="tsd-kind-icon">Int8</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/int8multiarray.html" class="tsd-kind-icon">Int8<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/itinerary.html" class="tsd-kind-icon">Itinerary</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/itineraryclear.html" class="tsd-kind-icon">Itinerary<wbr>Clear</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/itinerarydelay.html" class="tsd-kind-icon">Itinerary<wbr>Delay</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/itineraryerase.html" class="tsd-kind-icon">Itinerary<wbr>Erase</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/itineraryextend.html" class="tsd-kind-icon">Itinerary<wbr>Extend</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/itineraryset.html" class="tsd-kind-icon">Itinerary<wbr>Set</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/level.html" class="tsd-kind-icon">Level</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -339,13 +446,64 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="classes/loop.html" class="tsd-kind-icon">Loop</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/mirrorupdate.html" class="tsd-kind-icon">Mirror<wbr>Update</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/mirrorupdate_request.html" class="tsd-kind-icon">Mirror<wbr>Update_<wbr><wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/mirrorupdate_response.html" class="tsd-kind-icon">Mirror<wbr>Update_<wbr><wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/mirrorwakeup.html" class="tsd-kind-icon">Mirror<wbr>Wakeup</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/modeparameter.html" class="tsd-kind-icon">Mode<wbr>Parameter</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/moderequest.html" class="tsd-kind-icon">Mode<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/multiarraydimension.html" class="tsd-kind-icon">Multi<wbr>Array<wbr>Dimension</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/multiarraylayout.html" class="tsd-kind-icon">Multi<wbr>Array<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationack.html" class="tsd-kind-icon">Negotiation<wbr>Ack</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationconclusion.html" class="tsd-kind-icon">Negotiation<wbr>Conclusion</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationforfeit.html" class="tsd-kind-icon">Negotiation<wbr>Forfeit</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationkey.html" class="tsd-kind-icon">Negotiation<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationnotice.html" class="tsd-kind-icon">Negotiation<wbr>Notice</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationparticipantack.html" class="tsd-kind-icon">Negotiation<wbr>Participant<wbr>Ack</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationproposal.html" class="tsd-kind-icon">Negotiation<wbr>Proposal</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationrefusal.html" class="tsd-kind-icon">Negotiation<wbr>Refusal</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationrejection.html" class="tsd-kind-icon">Negotiation<wbr>Rejection</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/negotiationrepeat.html" class="tsd-kind-icon">Negotiation<wbr>Repeat</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/param.html" class="tsd-kind-icon">Param</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/participantdescription.html" class="tsd-kind-icon">Participant<wbr>Description</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/pathrequest.html" class="tsd-kind-icon">Path<wbr>Request</a>
@@ -354,13 +512,133 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="classes/place.html" class="tsd-kind-icon">Place</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/point.html" class="tsd-kind-icon">Point</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/point32.html" class="tsd-kind-icon">Point32</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/pointstamped.html" class="tsd-kind-icon">Point<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/polygon.html" class="tsd-kind-icon">Polygon</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/polygonstamped.html" class="tsd-kind-icon">Polygon<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/pose.html" class="tsd-kind-icon">Pose</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/pose2d.html" class="tsd-kind-icon">Pose2D</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/posearray.html" class="tsd-kind-icon">Pose<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/posestamped.html" class="tsd-kind-icon">Pose<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/posewithcovariance.html" class="tsd-kind-icon">Pose<wbr>With<wbr>Covariance</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/posewithcovariancestamped.html" class="tsd-kind-icon">Pose<wbr>With<wbr>Covariance<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/profile.html" class="tsd-kind-icon">Profile</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/quaternion.html" class="tsd-kind-icon">Quaternion</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/quaternionstamped.html" class="tsd-kind-icon">Quaternion<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/region.html" class="tsd-kind-icon">Region</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/registerparticipant.html" class="tsd-kind-icon">Register<wbr>Participant</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/registerparticipant_request.html" class="tsd-kind-icon">Register<wbr>Participant_<wbr><wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/registerparticipant_response.html" class="tsd-kind-icon">Register<wbr>Participant_<wbr><wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/registerquery.html" class="tsd-kind-icon">Register<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/registerquery_request.html" class="tsd-kind-icon">Register<wbr>Query_<wbr><wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/registerquery_response.html" class="tsd-kind-icon">Register<wbr>Query_<wbr><wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/robotmode.html" class="tsd-kind-icon">Robot<wbr>Mode</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/robotstate.html" class="tsd-kind-icon">Robot<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/route.html" class="tsd-kind-icon">Route</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulechangeadd.html" class="tsd-kind-icon">Schedule<wbr>Change<wbr>Add</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulechangecull.html" class="tsd-kind-icon">Schedule<wbr>Change<wbr>Cull</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulechangedelay.html" class="tsd-kind-icon">Schedule<wbr>Change<wbr>Delay</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/scheduleinconsistency.html" class="tsd-kind-icon">Schedule<wbr>Inconsistency</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/scheduleinconsistencyrange.html" class="tsd-kind-icon">Schedule<wbr>Inconsistency<wbr>Range</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/scheduleparticipantpatch.html" class="tsd-kind-icon">Schedule<wbr>Participant<wbr>Patch</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulepatch.html" class="tsd-kind-icon">Schedule<wbr>Patch</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulequery.html" class="tsd-kind-icon">Schedule<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulequeryparticipants.html" class="tsd-kind-icon">Schedule<wbr>Query<wbr>Participants</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulequeryspacetime.html" class="tsd-kind-icon">Schedule<wbr>Query<wbr>Spacetime</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/scheduleregister.html" class="tsd-kind-icon">Schedule<wbr>Register</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/schedulewriteritem.html" class="tsd-kind-icon">Schedule<wbr>Writer<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/session.html" class="tsd-kind-icon">Session</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/shape.html" class="tsd-kind-icon">Shape</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/shapecontext.html" class="tsd-kind-icon">Shape<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/space.html" class="tsd-kind-icon">Space</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/station.html" class="tsd-kind-icon">Station</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/string.html" class="tsd-kind-icon">String</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/supervisorheartbeat.html" class="tsd-kind-icon">Supervisor<wbr>Heartbeat</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/tasksummary.html" class="tsd-kind-icon">Task<wbr>Summary</a>
@@ -372,10 +650,85 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="classes/time.html" class="tsd-kind-icon">Time</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/timespan.html" class="tsd-kind-icon">Timespan</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/trait.html" class="tsd-kind-icon">Trait</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/trajectory.html" class="tsd-kind-icon">Trajectory</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/trajectorywaypoint.html" class="tsd-kind-icon">Trajectory<wbr>Waypoint</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/transform.html" class="tsd-kind-icon">Transform</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/transformstamped.html" class="tsd-kind-icon">Transform<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/transportevents.html" class="tsd-kind-icon">Transport<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/twist.html" class="tsd-kind-icon">Twist</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/twiststamped.html" class="tsd-kind-icon">Twist<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/twistwithcovariance.html" class="tsd-kind-icon">Twist<wbr>With<wbr>Covariance</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/twistwithcovariancestamped.html" class="tsd-kind-icon">Twist<wbr>With<wbr>Covariance<wbr>Stamped</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint16.html" class="tsd-kind-icon">UInt16</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint16multiarray.html" class="tsd-kind-icon">UInt16<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint32.html" class="tsd-kind-icon">UInt32</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint32multiarray.html" class="tsd-kind-icon">UInt32<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint64.html" class="tsd-kind-icon">UInt64</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint64multiarray.html" class="tsd-kind-icon">UInt64<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint8.html" class="tsd-kind-icon">UInt8</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/uint8multiarray.html" class="tsd-kind-icon">UInt8<wbr>Multi<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unregisterparticipant.html" class="tsd-kind-icon">Unregister<wbr>Participant</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unregisterparticipant_request.html" class="tsd-kind-icon">Unregister<wbr>Participant_<wbr><wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unregisterparticipant_response.html" class="tsd-kind-icon">Unregister<wbr>Participant_<wbr><wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unregisterquery.html" class="tsd-kind-icon">Unregister<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unregisterquery_request.html" class="tsd-kind-icon">Unregister<wbr>Query_<wbr><wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/unregisterquery_response.html" class="tsd-kind-icon">Unregister<wbr>Query_<wbr><wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/vector3.html" class="tsd-kind-icon">Vector3</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/vector3stamped.html" class="tsd-kind-icon">Vector3<wbr>Stamped</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/workcellconfiguration.html" class="tsd-kind-icon">Workcell<wbr>Configuration</a>
@@ -388,6 +741,12 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/workcellstate.html" class="tsd-kind-icon">Workcell<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/wrench.html" class="tsd-kind-icon">Wrench</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/wrenchstamped.html" class="tsd-kind-icon">Wrench<wbr>Stamped</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/options.html" class="tsd-kind-icon">Options</a>
@@ -423,7 +782,22 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 						<a href="globals.html#torostime" class="tsd-kind-icon">to<wbr>Ros<wbr>Time</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#adapterdoorrequests" class="tsd-kind-icon">adapter<wbr>Door<wbr>Requests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#adapterliftrequests" class="tsd-kind-icon">adapter<wbr>Lift<wbr>Requests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#deliveryrequest" class="tsd-kind-icon">delivery<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#destinationrequests" class="tsd-kind-icon">destination<wbr>Requests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#dispenserrequests" class="tsd-kind-icon">dispenser<wbr>Requests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#dispenserresults" class="tsd-kind-icon">dispenser<wbr>Results</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#dispenserstates" class="tsd-kind-icon">dispenser<wbr>States</a>
@@ -433,6 +807,9 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#doorstates" class="tsd-kind-icon">door<wbr>States</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#doorsupervisorheartbeat" class="tsd-kind-icon">door<wbr>Supervisor<wbr>Heart<wbr>Beat</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#fleetstates" class="tsd-kind-icon">fleet<wbr>States</a>
@@ -445,6 +822,15 @@ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#liftstates" class="tsd-kind-icon">lift<wbr>States</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#looprequests" class="tsd-kind-icon">loop<wbr>Requests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#robotmoderequests" class="tsd-kind-icon">robot<wbr>Mode<wbr>Requests</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#robotpathrequests" class="tsd-kind-icon">robot<wbr>Path<wbr>Requests</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#stationrequest" class="tsd-kind-icon">station<wbr>Request</a>
