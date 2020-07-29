@@ -12,7 +12,7 @@
     "test:browser": "karma start --single-run",
     "lint": "eslint --ext ts,js lib spec transport scripts",
     "docs": "rm -rf docs && typedoc",
-    "release": "npx standard-version -a"
+    "release": "standard-version -a"
   },
   "repository": {
     "type": "git",
