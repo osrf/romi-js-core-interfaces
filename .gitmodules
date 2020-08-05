@@ -1,0 +1,6 @@
+[submodule "thirdparty/rmf_core"]
+	path = thirdparty/rmf_core
+	url = https://github.com/osrf/rmf_core
+[submodule "thirdparty/traffic_editor"]
+	path = thirdparty/traffic_editor
+	url = https://github.com/osrf/traffic_editor.git

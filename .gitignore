@@ -2,8 +2,10 @@
 /coverage/
 /.nyc_output/
 
-# cmake build output
+# colcon output
 /build/
+/install/
+/log/
 
 # generated files
 /lib/core-msgs/
