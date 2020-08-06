@@ -1,15 +1,24 @@
 cmake_minimum_required(VERSION 3.10)
 project(romi-js-core-interfaces NONE)
 
-find_package(rmf_door_msgs REQUIRED)
-find_package(rmf_lift_msgs REQUIRED)
-find_package(rmf_fleet_msgs REQUIRED)
-find_package(rmf_task_msgs REQUIRED)
-find_package(rmf_dispenser_msgs REQUIRED)
-find_package(rmf_workcell_msgs REQUIRED)
-find_package(building_map_msgs REQUIRED)
+set(rmf_msgs
+  rmf_door_msgs
+  rmf_lift_msgs
+  rmf_fleet_msgs
+  rmf_task_msgs
+  rmf_dispenser_msgs
+  rmf_workcell_msgs
+  building_map_msgs)
 
-add_custom_target(build ALL npm install WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+foreach(msg ${rmf_msgs})
+  find_package(${msg} REQUIRED)
+endforeach(msg)
 
-# A dummy install target for colcon to find. Javascript doesn't have the concept of "install".
+add_custom_target(build ALL
+  python3 bin/gentypes.py lib/core-msgs ${rmf_msgs} &&
+  npx tsc --build &&
+  npx webpack --mode production
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
+# A dummy install target for colcon to find.
 install(CODE "")
