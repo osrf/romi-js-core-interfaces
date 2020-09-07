@@ -1,5 +1,3 @@
-# Needs to be ran in ros:eloquent docker container.
-
 name: Unit Test
 description: Unit Test
 runs:
