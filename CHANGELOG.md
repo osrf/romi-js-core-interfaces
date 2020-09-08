@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/osrf/romi-js-core-interfaces/compare/v0.1.0...v0.1.1) (2020-09-08)
+
+
+### Bug Fixes
+
+* deserialization of primitive arrays; relax type checking ([#14](https://github.com/osrf/romi-js-core-interfaces/issues/14)) ([86de64e](https://github.com/osrf/romi-js-core-interfaces/commit/86de64ed120ab1f965ea7c40445f5176523acb2a))
+
 ## [0.1.0](https://github.com/osrf/romi-js-core-interfaces/compare/v0.0.2-alpha.7...v0.1.0) (2020-07-29)
 
 
