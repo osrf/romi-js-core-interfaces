@@ -6,5 +6,6 @@ if (gitStatus.length) {
   process.exit(1);
 }
 childProcess.execSync(
-  'npm run docs && git add docs',
+  // eslint-disable-next-line max-len
+  'npm run clean && npm install && npm run build && npm test && npm run test:browser && npm run docs && git add docs',
 );
