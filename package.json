@@ -5,7 +5,6 @@
   "scripts": {
     "build": "colcon build --base-paths . thirdparty --packages-up-to romi-js-core-interfaces",
     "prepare": "git submodule update --init --depth 1",
-    "prepack": "npm run clean && npm run build",
     "watch": "tsc --watch",
     "clean": "tsc --build --clean && rm -rf build install log lib/core-msgs bundle",
     "test": "jasmine",
