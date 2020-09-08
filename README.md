@@ -1,3 +1,5 @@
+![master](https://github.com/osrf/romi-js-core-interfaces/workflows/master/badge.svg)
+
 # About RoMi-js
 
 RoMi-js is a set of libraries to make it easier to interface with RoMi with nodejs or in the

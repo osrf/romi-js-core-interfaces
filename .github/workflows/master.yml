@@ -1,0 +1,16 @@
+name: master
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  unit-test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v2
+      - name: unit test
+        uses: ./.github/actions/unit-test
