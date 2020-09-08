@@ -16,15 +16,13 @@ export class {{ base_type.type }} {
     }
 {% if field.js_type.is_array %}
     if (!Array.isArray(obj['{{ field.name }}'])) {
-      throw new TypeError('expected "{{ field.name }}" to be an array');
+      throw new TypeError('expected "{{ field.name }}" to be of type "{{ field.js_type.type }}"');
     }
 {% if field.js_type.element_type.is_primitive %}
-    const {{ field.name }} = (obj['{{ field.name }}'] as []).map(x => {
-      if (typeof obj['{{ field.name }}'] !== '{{ field.js_type.element_type.type }}') {
-        throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}"');
-      }
-      return x;
-    });
+    const {{ field.name }} = obj['{{ field.name }}'];
+    if ({{ field.name }}.length > 0 && typeof {{ field.name }}[0] !== '{{ field.js_type.element_type.type }}') {
+      throw new TypeError('expected "{{ field.name }}" to be of type "{{ field.js_type.type }}"');
+    }
 {% else %}
     const {{ field.name }} = obj['{{ field.name }}'].map(x => {
       return {{ field.js_type.element_type.type }}.fromObject(x);
@@ -38,10 +36,9 @@ export class {{ base_type.type }} {
 {% elif field.js_type.is_typed_array %}
     let {{ field.name }};
     if (!(obj['{{ field.name }}'] instanceof {{ field.js_type.type }})) {
-      if (!Array.isArray(obj['{{ field.name }}'])) {
+      if (!Array.isArray(obj['{{ field.name }}']) || (obj['{{ field.name }}'].length > 0 && typeof obj['{{ field.name }}'][0] !== 'number')) {
         throw new TypeError('expected "{{ field.name }}" to be "{{ field.js_type.type }}" or an array');
       } else {
-        obj['{{ field.name }}'].every(x => typeof x === 'number');
         {{ field.name }} = new {{ field.js_type.type }}([...obj['{{ field.name }}']]);
       }
     } else {
