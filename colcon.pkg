@@ -8,6 +8,7 @@
     'rmf_task_msgs',
     'rmf_dispenser_msgs',
     'rmf_workcell_msgs',
+    'rmf_traffic_msgs',
     'building_map_msgs',
   ],
 }
