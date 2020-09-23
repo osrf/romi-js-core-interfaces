@@ -1,6 +1,6 @@
 {
   "name": "@osrf/romi-js-core-interfaces",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "library to interface with components in RoMi",
   "scripts": {
     "build": "colcon build --base-paths . thirdparty --packages-up-to romi-js-core-interfaces",

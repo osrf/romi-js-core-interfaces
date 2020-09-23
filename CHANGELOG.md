@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/osrf/romi-js-core-interfaces/compare/v0.1.1...v0.1.2) (2020-09-23)
+
+
+### Features
+
+* update message definitions ([3cda075](https://github.com/osrf/romi-js-core-interfaces/commit/3cda0754cf238bafbaee6fd6a5b59a1fe6a5c349))
+
 ### [0.1.1](https://github.com/osrf/romi-js-core-interfaces/compare/v0.1.0...v0.1.1) (2020-09-08)
 
 
