@@ -1,4 +1,4 @@
-FROM ros:eloquent
+FROM ros:foxy
 
 # install deps
 RUN apt-get update && apt-get install -y curl && \
