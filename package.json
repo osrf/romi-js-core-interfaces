@@ -4,7 +4,6 @@
   "description": "library to interface with components in RoMi",
   "scripts": {
     "build": "npm run build:gen && npx tsc --build && npx webpack --mode production",
-    "build:package": "npx tsc --build && npx webpack --mode production",
     "build:gen": "colcon build --base-paths . thirdparty --packages-up-to romi-js-core-interfaces",
     "prepare": "git submodule update --init --depth 1",
     "watch": "tsc --watch",
