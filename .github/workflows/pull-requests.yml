@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: '12'
       - name: install dependencies
-        run: apt-get update && apt-get install -y python3-jinja2 && npm ci
+        run: apt-get update && apt-get install -y python3-jinja2
       - name: build
-        run: . /opt/ros/foxy/setup.bash && npm run build
+        run: . /opt/ros/foxy/setup.bash && npm ci --unsafe-perm && npm run build
         shell: bash
       - name: test
         run: npm run test
