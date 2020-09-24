@@ -5,6 +5,7 @@ jobs:
   unit-test:
     name: Unit Test
     runs-on: ubuntu-latest
+    container: ros:foxy
     env:
       CI: true
     steps:
@@ -12,11 +13,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: '[build] install dependencies'
-        run: npm ci
-      - name: '[build] generate rmf msgs'
-        uses: ./.github/actions/gen-rmf-msgs
-      - name: '[build] npm package'
-        run: npm run build:package
+      - name: install dependencies
+        run: apt-get update && apt-get install -y python3-jinja2
+      - name: build
+        run: npm ci && npm run build
       - name: test
         run: npm run test && npm run test:browser
