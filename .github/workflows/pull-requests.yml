@@ -16,6 +16,6 @@ jobs:
       - name: install dependencies
         run: apt-get update && apt-get install -y python3-jinja2
       - name: build
-        run: npm ci && npm run build
+        run: . /opt/ros/foxy/setup.bash && npm ci && npm run build
       - name: test
-        run: npm run test && npm run test:browser
+        run: npm run test
