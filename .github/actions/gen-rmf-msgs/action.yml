@@ -1,0 +1,5 @@
+name: Generate rmf msgs
+description: Generate rmf msgs
+runs:
+  using: docker
+  image: Dockerfile

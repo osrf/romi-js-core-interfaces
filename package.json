@@ -3,7 +3,9 @@
   "version": "0.1.3",
   "description": "library to interface with components in RoMi",
   "scripts": {
-    "build": "colcon build --base-paths . thirdparty --packages-up-to romi-js-core-interfaces",
+    "build": "npm run build:gen && npx tsc --build && npx webpack --mode production",
+    "build:package": "npx tsc --build && npx webpack --mode production",
+    "build:gen": "colcon build --base-paths . thirdparty --packages-up-to romi-js-core-interfaces",
     "prepare": "git submodule update --init --depth 1",
     "watch": "tsc --watch",
     "clean": "tsc --build --clean && rm -rf build install log lib/core-msgs bundle",

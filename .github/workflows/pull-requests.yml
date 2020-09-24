@@ -9,5 +9,9 @@ jobs:
       CI: true
     steps:
       - uses: actions/checkout@v2
-      - name: unit test
-        uses: ./.github/actions/unit-test
+      - name: '[build] generate rmf msgs'
+        uses: ./.github/actions/gen-rmf-msgs
+      - name: '[build] npm package'
+        run: npm run build:package
+      - name: test
+        run: npm run test && npm run test:browser

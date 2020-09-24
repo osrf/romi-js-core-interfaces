@@ -12,9 +12,7 @@ set(rmf_msgs
 )
 
 add_custom_target(build ALL
-  python3 bin/gentypes.py lib/core-msgs ${rmf_msgs} &&
-  npx tsc --build &&
-  npx webpack --mode production
+  python3 bin/gentypes.py lib/core-msgs ${rmf_msgs}
   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 # A dummy install target for colcon to find.
