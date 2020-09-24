@@ -8,16 +8,11 @@ set(rmf_msgs
   rmf_task_msgs
   rmf_dispenser_msgs
   rmf_workcell_msgs
-  building_map_msgs)
-
-foreach(msg ${rmf_msgs})
-  find_package(${msg} REQUIRED)
-endforeach(msg)
+  building_map_msgs
+)
 
 add_custom_target(build ALL
-  python3 bin/gentypes.py lib/core-msgs ${rmf_msgs} &&
-  npx tsc --build &&
-  npx webpack --mode production
+  python3 bin/gentypes.py lib/core-msgs ${rmf_msgs}
   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 # A dummy install target for colcon to find.
