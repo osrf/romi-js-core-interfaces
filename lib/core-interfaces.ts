@@ -1,6 +1,7 @@
 import { RomiService, RomiTopic } from '../transport';
 import * as msgs from './core-msgs';
 import { GetBuildingMap_Response, GetBuildingMap_Request } from './core-msgs';
+import * as customMsgs from './custom-msgs';
 
 // Topics
 
@@ -118,6 +119,12 @@ export const workcellConfiguration: RomiTopic<msgs.WorkcellConfiguration> = {
   topic: 'workcell_configuration',
 };
 
+export const emergency: RomiTopic<customMsgs.Emergency> = {
+  validate: (msg) => customMsgs.Emergency.fromObject(msg),
+  type: customMsgs.Emergency.typeName,
+  topic: 'fire_alarm_trigger',
+};
+
 // Services
 
 export const getBuildingMap: RomiService<
@@ -129,3 +136,4 @@ export const getBuildingMap: RomiService<
   type: 'building_map_msgs/srv/GetBuildingMap',
   service: 'get_building_map',
 };
+
