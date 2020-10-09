@@ -215,7 +215,11 @@ colcon build
 Follow the instructions of [rmf_core](https://github.com/osrf/rmf_core#Installation) and
 [traffic_editor](https://github.com/osrf/traffic_editor#Installation) to build and install them.
 
-Build and install with npm
+Install and build with npm
 ```
 npm install
+
+npm build
 ```
+
+Obs: installing [jinja2](https://pypi.org/project/Jinja2/) with python is pre-requisite to build.
