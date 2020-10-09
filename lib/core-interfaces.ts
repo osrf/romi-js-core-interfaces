@@ -1,7 +1,6 @@
 import { RomiService, RomiTopic } from '../transport';
 import * as msgs from './core-msgs';
 import { GetBuildingMap_Response, GetBuildingMap_Request } from './core-msgs';
-import * as customMsgs from './custom-msgs';
 
 // Topics
 
@@ -119,9 +118,9 @@ export const workcellConfiguration: RomiTopic<msgs.WorkcellConfiguration> = {
   topic: 'workcell_configuration',
 };
 
-export const emergency: RomiTopic<customMsgs.Emergency> = {
-  validate: (msg) => customMsgs.Emergency.fromObject(msg),
-  type: customMsgs.Emergency.typeName,
+export const emergency: RomiTopic<msgs.Bool> = {
+  validate: (msg) => msgs.Bool.fromObject(msg),
+  type: msgs.Bool.typeName,
   topic: 'fire_alarm_trigger',
 };
 
