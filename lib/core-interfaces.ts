@@ -118,6 +118,12 @@ export const workcellConfiguration: RomiTopic<msgs.WorkcellConfiguration> = {
   topic: 'workcell_configuration',
 };
 
+export const emergency: RomiTopic<msgs.Bool> = {
+  validate: (msg) => msgs.Bool.fromObject(msg),
+  type: msgs.Bool.typeName,
+  topic: 'fire_alarm_trigger',
+};
+
 // Services
 
 export const getBuildingMap: RomiService<
@@ -129,3 +135,4 @@ export const getBuildingMap: RomiService<
   type: 'building_map_msgs/srv/GetBuildingMap',
   service: 'get_building_map',
 };
+
