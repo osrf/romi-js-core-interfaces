@@ -1,6 +1,6 @@
 {
   "name": "@osrf/romi-js-core-interfaces",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "library to interface with components in RoMi",
   "scripts": {
     "build": "npm run build:gen && npx tsc --build && npx webpack --mode production",
